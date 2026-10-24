@@ -3347,101 +3347,208 @@ dialog.custom-modal-wide {
 }
 
 
-/* Main Boutique Residential Showcase & 3D Master Plan */
+/* Main Boutique Residential Showcase & Master Plan */
 .boutique-showcase-grid {
   display: grid;
   grid-template-columns: 1.15fr 1fr;
   gap: 2.25rem;
   align-items: stretch;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
-/* Columna Izquierda: Render 3D Panoramico */
+/* Columna Izquierda: Tarjeta Arquitectónica del Plano */
 .boutique-visual-column {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 1.25rem;
+  gap: 1.1rem;
   height: 100%;
 }
 
-.boutique-render-frame {
-  position: relative;
-  border-radius: var(--radius-xl, 24px);
-  overflow: hidden;
+.plano-architectural-card {
   background: #ffffff;
   border: 1px solid rgba(22, 44, 35, 0.1);
-  box-shadow: 0 16px 45px rgba(15, 31, 24, 0.08);
-  cursor: pointer;
+  border-radius: var(--radius-xl, 24px);
+  box-shadow: 0 12px 35px rgba(15, 31, 24, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: all var(--transition-smooth);
+}
+
+.plano-architectural-card:hover {
+  border-color: rgba(155, 126, 88, 0.4);
+  box-shadow: 0 18px 45px rgba(15, 31, 24, 0.1);
+}
+
+/* Header superior de la tarjeta del plano */
+.plano-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.4rem;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(22, 44, 35, 0.06);
+}
+
+.plano-card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.plano-live-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.25);
+  animation: pulseDot 2.2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+.plano-card-title {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-forest-900);
+}
+
+.plano-card-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  background: rgba(30, 58, 47, 0.06);
+  color: var(--color-forest-800);
+}
+
+.plano-zoom-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-forest-800);
+  background: #f7f6f2;
+  border: 1px solid rgba(22, 44, 35, 0.1);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.plano-zoom-btn:hover {
+  background: var(--color-forest-900);
+  color: #ffffff;
+  border-color: var(--color-forest-900);
+}
+
+/* Canvas del Plano */
+.plano-canvas {
+  position: relative;
+  background: #ffffff;
+  padding: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
   flex: 1 1 auto;
 }
 
-.boutique-render-frame:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-bronze-500);
-  box-shadow: 0 24px 60px rgba(15, 31, 24, 0.18);
-}
-
-.boutique-render-frame picture {
+.plano-canvas picture {
   width: 100%;
-  height: 100%;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.boutique-render-frame img {
+.plano-canvas img {
   width: 100%;
-  height: 100%;
-  min-height: 400px;
-  max-height: 480px;
+  height: auto;
+  max-height: 460px;
+  object-fit: contain;
   display: block;
-  object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.boutique-render-frame:hover img {
-  transform: scale(1.03);
+.plano-canvas:hover img {
+  transform: scale(1.025);
 }
 
-.boutique-zoom-overlay {
+.plano-hover-prompt {
   position: absolute;
   inset: 0;
-  background: rgba(15, 31, 24, 0.25);
-  opacity: 0;
+  background: rgba(22, 44, 35, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
   transition: opacity var(--transition-fast);
-}
-
-.boutique-render-frame:hover .boutique-zoom-overlay {
-  opacity: 1;
-}
-
-.boutique-floating-tags {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  right: 1rem;
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
   pointer-events: none;
 }
 
-.technical-plan-trigger {
-  display: flex;
-  justify-content: center;
+.plano-canvas:hover .plano-hover-prompt {
+  opacity: 1;
 }
 
+.plano-hover-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: #ffffff;
+  color: var(--color-forest-900);
+  padding: 0.7rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(15, 31, 24, 0.16);
+  transform: translateY(4px);
+  transition: transform 0.3s ease;
+}
+
+.plano-canvas:hover .plano-hover-pill {
+  transform: translateY(0);
+}
+
+/* Píldoras de Especificaciones */
+.plano-spec-pills {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.5rem;
+  padding: 0.9rem 1.25rem;
+  background: #fbf9f5;
+  border-top: 1px solid rgba(22, 44, 35, 0.06);
+  flex-wrap: wrap;
+}
+
+.spec-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-forest-900);
+}
+
+.spec-pill svg {
+  color: var(--color-bronze-600);
+  flex-shrink: 0;
+}
+
+/* Botón inferior pantalla completa */
 .btn-tech-plan {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 0.65rem;
   padding: 0.85rem 1.4rem;
   border-radius: var(--radius-full);
   background: #ffffff;
@@ -3460,10 +3567,10 @@ dialog.custom-modal-wide {
   color: #ffffff;
   border-color: var(--color-forest-900);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(15, 31, 24, 0.12);
+  box-shadow: 0 8px 22px rgba(15, 31, 24, 0.14);
 }
 
-/* Columna Derecha: Beneficios + Conversion */
+/* Columna Derecha: Beneficios + Conversión */
 .boutique-info-column {
   display: flex;
   flex-direction: column;
@@ -3530,13 +3637,13 @@ dialog.custom-modal-wide {
   line-height: 1.45;
 }
 
-/* Caja de Conversion Directa a WhatsApp */
+/* Caja de Conversión Directa a WhatsApp */
 .boutique-conversion-box {
-  background: linear-gradient(135deg, rgba(30, 58, 47, 0.03) 0%, rgba(155, 126, 88, 0.1) 100%), #ffffff;
+  background: linear-gradient(135deg, rgba(253, 252, 249, 0.95) 0%, rgba(246, 243, 236, 0.95) 100%), #ffffff;
   border: 1.5px solid rgba(155, 126, 88, 0.35);
   border-radius: var(--radius-xl);
   padding: 1.4rem 1.5rem;
-  box-shadow: 0 10px 30px rgba(15, 31, 24, 0.06);
+  box-shadow: 0 10px 30px rgba(15, 31, 24, 0.05);
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
@@ -3596,7 +3703,8 @@ dialog.custom-modal-wide {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .boutique-render-frame img {
-    min-height: 300px;
+  .plano-canvas img {
+    max-height: 360px;
   }
 }
+
