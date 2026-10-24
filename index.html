@@ -529,88 +529,30 @@
       <div class="container">
         <!-- Encabezado de la Sección -->
         <div class="section-header reveal-on-scroll">
-          <span class="eyebrow">Plano Maestro &amp; Estatus de Inventario Oficial</span>
-          <h2>Distribución del Fraccionamiento &amp; Disponibilidad de Lotes</h2>
+          <span class="eyebrow">Conjunto Residencial &amp; Master Plan</span>
+          <h2>Un Fraccionamiento Boutique Diseñado para la Privacidad y el Confort</h2>
           <p>
-            Fraccionamiento horizontal cerrado de alta exclusividad con solo <strong>14 lotes residenciales</strong> (desde 140 m² hasta 228.92 m²). Consulte el estatus actualizado en tiempo real: lotes disponibles en preventa, venta inmediata y residencias consolidadas.
+            Una privada exclusiva de solo <strong>14 residencias contemporáneas</strong> con diseño sustentable, tecnología 100% libre de gas y paneles solares. Terrenos generosos desde <strong>140 m² hasta 228.92 m²</strong> pensados para brindar tranquilidad, amplitud y la máxima plusvalía en Ocoyoacac.
           </p>
         </div>
 
-        <!-- Barra de Métricas y Estatus de Inventario (KPI Cards) -->
-        <div class="inventory-kpi-bar reveal-on-scroll">
-          <div class="inventory-kpi-card">
-            <div class="kpi-top">
-              <span class="kpi-icon total">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                  <path d="M3 9h18M9 21V9"></path>
-                </svg>
-              </span>
-              <span class="kpi-badge">Total</span>
-            </div>
-            <div class="kpi-number">14</div>
-            <div class="kpi-title">Lotes Residenciales</div>
-            <div class="kpi-desc">Fraccionamiento boutique 100% privado</div>
-          </div>
-
-          <div class="inventory-kpi-card highlight-preventa">
-            <div class="kpi-top">
-              <span class="kpi-icon preventa">
-                <span class="status-pulse-dot bg-preventa"></span>
-              </span>
-              <span class="kpi-badge badge-preventa">57% Inventario</span>
-            </div>
-            <div class="kpi-number color-preventa">8</div>
-            <div class="kpi-title">En Preventa</div>
-            <div class="kpi-desc">Precios preferenciales · Lotes 1, 8, 9, 10, 11, 12, 13, 14</div>
-          </div>
-
-          <div class="inventory-kpi-card highlight-venta">
-            <div class="kpi-top">
-              <span class="kpi-icon venta">
-                <span class="status-pulse-dot bg-venta"></span>
-              </span>
-              <span class="kpi-badge badge-venta">14% Inventario</span>
-            </div>
-            <div class="kpi-number color-venta">2</div>
-            <div class="kpi-title">En Venta Inmediata</div>
-            <div class="kpi-desc">Lotes 2 y 7 (140 m² c/u) · Listos para escriturar</div>
-          </div>
-
-          <div class="inventory-kpi-card highlight-vendido">
-            <div class="kpi-top">
-              <span class="kpi-icon vendido">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-              </span>
-              <span class="kpi-badge badge-vendido">29% Consolidado</span>
-            </div>
-            <div class="kpi-number color-vendido">4</div>
-            <div class="kpi-title">Lotes Vendidos</div>
-            <div class="kpi-desc">Lotes 3, 4, 5 y 6 · Alta plusvalía comprobada</div>
-          </div>
-        </div>
-
-
-
-        <!-- Showcase Principal: Plano General Interactivo + Tabla de Inventario -->
-        <div class="masterplan-main-grid reveal-on-scroll">
+        <!-- Showcase Principal: Render 3D Panorámico + Tarjetas de Valor y Conversión -->
+        <div class="boutique-showcase-grid reveal-on-scroll">
           
-          <!-- Columna Izquierda: Imagen del Plano Maestro Oficial con Zoom HD -->
-          <div class="masterplan-visual-column">
-            <div class="masterplan-frame open-masterplan-modal" id="masterPlanImageWrapper" role="button" tabindex="0" title="Clic para ampliar Plano Maestro en Alta Definición">
+          <!-- Columna Izquierda: Render 3D en Perspectiva Aérea del Conjunto -->
+          <div class="boutique-visual-column">
+            <div class="boutique-render-frame open-masterplan-modal" role="button" tabindex="0" title="Clic para ampliar vista panorámica en alta definición">
               <picture>
-                <source srcset="assets/images/master_plan_clean.webp" type="image/webp">
-                <img src="assets/images/master_plan_clean.jpg" 
-                     alt="Plano arquitectónico oficial del fraccionamiento MOTUL y distribución de los 14 lotes" 
+                <source srcset="assets/images/real_conjunto_aereo.webp" type="image/webp">
+                <img src="assets/images/real_conjunto_aereo.jpg" 
+                     alt="Perspectiva 3D aérea del conjunto residencial exclusivo MOTUL" 
                      id="masterPlanMainImg"
                      loading="lazy" 
-                     width="625" 
-                     height="520">
+                     width="1024" 
+                     height="589">
               </picture>
               
-              <div class="masterplan-zoom-overlay">
+              <div class="boutique-zoom-overlay">
                 <div class="zoom-badge">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <circle cx="11" cy="11" r="8"></circle>
@@ -618,16 +560,23 @@
                     <line x1="11" y1="8" x2="11" y2="14"></line>
                     <line x1="8" y1="11" x2="14" y2="11"></line>
                   </svg>
-                  <span>Ampliar Plano HD</span>
+                  <span>Ver Perspectiva Completa</span>
                 </div>
               </div>
 
-              <div class="masterplan-floating-tags">
+              <div class="boutique-floating-tags">
                 <span class="tag-amenity">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                   </svg>
-                  Acceso Controlado 24/7
+                  Privada de solo 14 Casas
+                </span>
+                <span class="tag-amenity">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  Caseta &amp; Acceso 24/7
                 </span>
                 <span class="tag-amenity">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -639,41 +588,83 @@
               </div>
             </div>
 
-            <!-- Guía Rápida de Ubicaciones en el Fraccionamiento -->
-            <div class="masterplan-zone-guide">
-              <div class="zone-item">
-                <div class="zone-badge">Manzana Norte</div>
-                <div class="zone-text">
-                  <strong>Lotes 12, 13 y 14:</strong> Terrenos premium de <strong>211.52 m² a 228.92 m²</strong>. Colindan directamente con el jardín común, palapa y asadores.
+            <!-- Botón sutil para ver el plano arquitectónico técnico en modal -->
+            <div class="technical-plan-trigger">
+              <button type="button" class="btn-tech-plan open-masterplan-modal">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+                  <line x1="8" y1="2" x2="8" y2="18"/>
+                  <line x1="16" y1="6" x2="16" y2="22"/>
+                </svg>
+                <span>Ver Plano Arquitectónico con Medidas Exactas 📐</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Beneficios Clave + Conversión Inmediata a WhatsApp -->
+          <div class="boutique-info-column">
+            
+            <!-- Beneficios Resumidos y Atractivos -->
+            <div class="boutique-benefits-list">
+              <div class="benefit-card">
+                <div class="benefit-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                </div>
+                <div class="benefit-content">
+                  <h4>Exclusividad &amp; Privacidad Total</h4>
+                  <p>Solo 14 residencias en privada cerrada, sin tránsito foráneo y con circuito cerrado de vigilancia 24/7.</p>
                 </div>
               </div>
-              <div class="zone-item">
-                <div class="zone-badge">Manzana Sur</div>
-                <div class="zone-text">
-                  <strong>Lotes 1 al 11:</strong> Terrenos de <strong>140 m² a 181 m²</strong>. Lote 1 en esquina cabecera; lotes 2 y 7 en venta; lotes 8 a 11 en preventa (154 m² c/u).
+
+              <div class="benefit-card">
+                <div class="benefit-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="3" y1="9" x2="21" y2="9"/>
+                    <line x1="9" y1="21" x2="9" y2="9"/>
+                  </svg>
+                </div>
+                <div class="benefit-content">
+                  <h4>Lotes Generosos de 140 m² a 228 m²</h4>
+                  <p>Dimensiones amplias con orientación solar privilegiada para elegir cualquiera de los 3 modelos (A, B o C).</p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2a9 9 0 0 0-9 9c0 4.97 9 13 9 13s9-8.03 9-13a9 9 0 0 0-9-9z"/>
+                    <circle cx="12" cy="11" r="3"/>
+                  </svg>
+                </div>
+                <div class="benefit-content">
+                  <h4>230 m² de Áreas Verdes &amp; Palapa</h4>
+                  <p>Jardín central arbolado con terraza, asadores y juegos infantiles para convivencia familiar segura.</p>
                 </div>
               </div>
             </div>
 
-            <!-- Tarjeta de Asistencia VIP por WhatsApp para equilibrar columnas -->
-            <div class="masterplan-wa-box">
-              <div class="wa-box-header">
-                <div class="wa-avatar-badge" aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor">
+            <!-- Caja Destacada de Conversión Directa a WhatsApp -->
+            <div class="boutique-conversion-box">
+              <div class="conversion-header">
+                <div class="wa-badge-glow">
+                  <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
                   </svg>
-                  <span class="wa-status-online"></span>
                 </div>
-                <div class="wa-box-titles">
-                  <h4>¿Deseas apartar o cotizar un lote específico?</h4>
-                  <p>Atención inmediata por WhatsApp en menos de 5 minutos</p>
+                <div>
+                  <h4 class="conversion-title">¿Deseas conocer los lotes disponibles?</h4>
+                  <p class="conversion-subtitle">Te asesoramos de inmediato por WhatsApp en menos de 5 min</p>
                 </div>
               </div>
-              <p class="wa-box-desc">
-                Te enviamos por WhatsApp la <strong>ficha técnica con medidas exactas</strong>, orientación solar, vistas y la <strong>corrida financiera con precio congelado de preventa</strong>.
+              <p class="conversion-desc">
+                Recibe el mapa de ubicaciones disponibles, orientación y la corrida financiera personalizada con precio preferencial congelado de preventa.
               </p>
-              <div class="wa-box-actions">
-                <a href="https://wa.me/525589938477?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%2C%20orientaci%C3%B3n%20y%20precio%20de%20preventa%20de%20un%20lote%20en%20MOTUL." 
+              <div class="conversion-buttons">
+                <a href="https://wa.me/525589938477?text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20lotes%20disponibles%20y%20precios%20de%20preventa%20en%20MOTUL." 
                    target="_blank" 
                    rel="noopener noreferrer" 
                    class="btn btn-whatsapp" 
@@ -681,80 +672,19 @@
                   <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
                   </svg>
-                  <span>Consultar Lote por WhatsApp 🟢</span>
+                  <span>Consultar Lotes por WhatsApp 🟢</span>
                 </a>
+                <button type="button" class="btn btn-secondary open-brochure-modal" style="width:100%;justify-content:center;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span>Descargar Ficha Técnica &amp; Precios (.PDF)</span>
+                </button>
               </div>
             </div>
-          </div>
 
-          <!-- Columna Derecha: Directorio Interactivo de Inventario por Lotes -->
-          <div class="masterplan-inventory-column">
-            <div class="inventory-card-panel">
-              <div class="inventory-panel-header">
-                <div class="panel-title-group">
-                  <span class="panel-eyebrow">Disponibilidad en Tiempo Real</span>
-                  <h3 class="panel-title">Estatus por Lote &amp; Superficies</h3>
-                </div>
-                <!-- Filtros Interactivos -->
-                <div class="inventory-filter-tabs" role="tablist" aria-label="Filtrar inventario por estatus">
-                  <button type="button" class="inv-filter-btn active" data-filter="all" role="tab" aria-selected="true">
-                    Todos (14)
-                  </button>
-                  <button type="button" class="inv-filter-btn" data-filter="preventa" role="tab" aria-selected="false">
-                    🟢 Preventa (8)
-                  </button>
-                  <button type="button" class="inv-filter-btn" data-filter="venta" role="tab" aria-selected="false">
-                    🟠 Venta (2)
-                  </button>
-                  <button type="button" class="inv-filter-btn" data-filter="vendido" role="tab" aria-selected="false">
-                    🔴 Vendidos (4)
-                  </button>
-                </div>
-              </div>
-
-              <!-- Tabla / Lista Dinámica de Lotes -->
-              <div class="inventory-table-container">
-                <table class="inventory-table" id="inventoryTable">
-                  <thead>
-                    <tr>
-                      <th scope="col">Lote</th>
-                      <th scope="col">Superficie (M²)</th>
-                      <th scope="col">Estatus</th>
-                      <th scope="col" style="text-align:right;">Acción</th>
-                    </tr>
-                  </thead>
-                  <tbody id="inventoryTableBody">
-                    <!-- Filas inyectadas y sincronizadas dinámicamente con JS -->
-                  </tbody>
-                </table>
-              </div>
-
-              <!-- Pie de Tarjeta con Acciones Clave -->
-              <div class="inventory-panel-footer">
-                <div class="footer-cta-text">
-                  <p>¿Desea apartar un lote o recibir la corrida financiera personalizada?</p>
-                </div>
-                <div class="footer-cta-buttons">
-                  <button type="button" class="btn btn-primary btn-sm open-brochure-modal">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                      <polyline points="7 10 12 15 17 10"></polyline>
-                      <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    <span>Descargar Ficha Técnica &amp; Precios</span>
-                  </button>
-                  <a href="https://wa.me/525589938477?text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20la%20disponibilidad%20actualizada%20de%20lotes%20en%20MOTUL%20Espacios%20Residenciales." 
-                     target="_blank" 
-                     rel="noopener noreferrer" 
-                     class="btn btn-whatsapp btn-sm">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                      <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-                    </svg>
-                    <span>Consultar por WhatsApp</span>
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
 
         </div>
