@@ -3369,9 +3369,9 @@ dialog.custom-modal-wide {
   position: relative;
   border-radius: var(--radius-xl, 24px);
   overflow: hidden;
-  background: #0f1f18;
-  border: 1px solid rgba(155, 126, 88, 0.3);
-  box-shadow: 0 16px 45px rgba(15, 31, 24, 0.12);
+  background: #ffffff;
+  border: 1px solid rgba(22, 44, 35, 0.1);
+  box-shadow: 0 16px 45px rgba(15, 31, 24, 0.08);
   cursor: pointer;
   transition: all var(--transition-smooth);
   display: flex;
