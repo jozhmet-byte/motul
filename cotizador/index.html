@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotizador Comercial | MOTUL Espacios Residenciales</title>
+  <meta name="description" content="Herramienta interna del equipo comercial de MOTUL para cotizar lotes, modelos, enganches y mensualidades estimadas.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1E3A2F">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/cotizador/cotizador.css?v=1.0">
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="cz-header">
+    <div class="cz-header-inner">
+      <a href="/" class="cz-brand" title="Ir al sitio MOTUL">
+        <img src="/assets/images/logo_motul_bco.png" alt="MOTUL Espacios Residenciales" width="140" height="25">
+        <span class="cz-brand-tag">Cotizador Comercial</span>
+      </a>
+      <div class="cz-header-actions">
+        <span class="cz-price-list-tag">Lista de precios · Octubre 2026</span>
+        <button type="button" class="cz-btn-ghost" id="btnHistory">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><polyline points="3 3 3 8 8 8"/><polyline points="12 7 12 12 15 14"/></svg>
+          <span>Historial</span>
+          <span class="cz-count" id="historyCount">0</span>
+        </button>
+        <button type="button" class="cz-btn-ghost" id="btnReset" title="Nueva cotización">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <span>Nueva</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="cz-main">
+    <div class="cz-layout">
+
+      <!-- ===================== COLUMNA IZQUIERDA: PASOS ===================== -->
+      <div class="cz-steps">
+
+        <!-- PASO 1: LOTE -->
+        <section class="cz-card" id="stepLote" aria-labelledby="h-lote">
+          <div class="cz-card-head">
+            <span class="cz-step-num">1</span>
+            <div>
+              <h1 id="h-lote" class="cz-card-title">Selecciona el lote</h1>
+              <p class="cz-card-sub">Haz clic directamente sobre el plano del sembrado o usa los accesos rápidos.</p>
+            </div>
+          </div>
+
+          <div class="cz-plan-wrap">
+            <div class="cz-plan" id="planCanvas">
+              <img src="/assets/images/master_plan_clean.jpg" alt="Plano general del sembrado MOTUL con numeración de lotes" width="625" height="520">
+              <!-- Hotspots generados por JS -->
+            </div>
+            <div class="cz-legend">
+              <span><i class="dot dot-preventa"></i>Preventa</span>
+              <span><i class="dot dot-entrega"></i>Entrega inmediata / 3 meses</span>
+              <span><i class="dot dot-vendido"></i>Vendido</span>
+            </div>
+          </div>
+
+          <div class="cz-lot-chips" id="lotChips" role="listbox" aria-label="Lotes"></div>
+        </section>
+
+        <!-- PASO 2: MODELO -->
+        <section class="cz-card" id="stepModelo" aria-labelledby="h-modelo">
+          <div class="cz-card-head">
+            <span class="cz-step-num">2</span>
+            <div>
+              <h2 id="h-modelo" class="cz-card-title">Modelo de casa</h2>
+              <p class="cz-card-sub" id="modelHint">Selecciona primero un lote para ver los modelos disponibles.</p>
+            </div>
+          </div>
+          <div class="cz-models" id="modelCards"></div>
+        </section>
+
+        <!-- PASO 3: ESQUEMA DE PAGO -->
+        <section class="cz-card" id="stepPago" aria-labelledby="h-pago">
+          <div class="cz-card-head">
+            <span class="cz-step-num">3</span>
+            <div>
+              <h2 id="h-pago" class="cz-card-title">Esquema de pago</h2>
+              <p class="cz-card-sub">Enganche, forma de pago y plazo del crédito hipotecario.</p>
+            </div>
+          </div>
+
+          <div class="cz-field">
+            <span class="cz-label">Forma de pago</span>
+            <div class="cz-segment" id="payMethod">
+              <button type="button" class="active" data-value="credito">Crédito hipotecario</button>
+              <button type="button" data-value="contado">Recursos propios</button>
+            </div>
+          </div>
+
+          <div class="cz-field">
+            <span class="cz-label">Enganche</span>
+            <div class="cz-chips" id="downChips"></div>
+          </div>
+
+          <div class="cz-field" id="termField">
+            <span class="cz-label">Plazo del crédito</span>
+            <div class="cz-chips" id="termChips"></div>
+          </div>
+
+          <div class="cz-grid-2">
+            <div class="cz-field" id="rateField">
+              <label class="cz-label" for="rateInput">Tasa anual estimada</label>
+              <div class="cz-input-suffix">
+                <input type="number" id="rateInput" min="6" max="20" step="0.05" value="11.00" inputmode="decimal">
+                <span>%</span>
+              </div>
+              <small class="cz-help">Promedio de mercado bancario en México. Ajustable.</small>
+            </div>
+            <div class="cz-field">
+              <label class="cz-label" for="deferSelect">Pago del enganche</label>
+              <select id="deferSelect">
+                <option value="1">En una sola exhibición</option>
+                <option value="3">Diferido en 3 pagos</option>
+                <option value="6">Diferido en 6 pagos</option>
+              </select>
+              <small class="cz-help">Después del apartado.</small>
+            </div>
+          </div>
+
+          <details class="cz-advanced">
+            <summary>Ajustes avanzados</summary>
+            <div class="cz-grid-3">
+              <div class="cz-field">
+                <label class="cz-label" for="holdInput">Apartado</label>
+                <div class="cz-input-prefix"><span>$</span><input type="text" id="holdInput" value="50,000" inputmode="numeric"></div>
+              </div>
+              <div class="cz-field">
+                <label class="cz-label" for="discountInput">Descuento autorizado</label>
+                <div class="cz-input-prefix"><span>$</span><input type="text" id="discountInput" value="0" inputmode="numeric"></div>
+              </div>
+              <div class="cz-field">
+                <label class="cz-label" for="closingInput">Gastos de escrituración</label>
+                <div class="cz-input-suffix"><input type="number" id="closingInput" min="0" max="15" step="0.5" value="6" inputmode="decimal"><span>%</span></div>
+              </div>
+            </div>
+          </details>
+        </section>
+
+        <!-- PASO 4: CLIENTE -->
+        <section class="cz-card" id="stepCliente" aria-labelledby="h-cliente">
+          <div class="cz-card-head">
+            <span class="cz-step-num">4</span>
+            <div>
+              <h2 id="h-cliente" class="cz-card-title">Datos del cliente</h2>
+              <p class="cz-card-sub">Necesarios para generar el PDF y enviarlo por WhatsApp.</p>
+            </div>
+          </div>
+
+          <div class="cz-grid-2">
+            <div class="cz-field">
+              <label class="cz-label" for="clientName">Nombre completo *</label>
+              <input type="text" id="clientName" placeholder="Ej. Mariana López" autocomplete="off">
+            </div>
+            <div class="cz-field">
+              <label class="cz-label" for="clientPhone">WhatsApp (10 dígitos) *</label>
+              <div class="cz-input-prefix"><span>+52</span><input type="tel" id="clientPhone" placeholder="55 1234 5678" inputmode="numeric" autocomplete="off"></div>
+            </div>
+            <div class="cz-field">
+              <label class="cz-label" for="clientEmail">Correo electrónico</label>
+              <input type="email" id="clientEmail" placeholder="cliente@correo.com" autocomplete="off">
+            </div>
+            <div class="cz-field">
+              <label class="cz-label" for="clientIncome">Ingreso mensual comprobable</label>
+              <div class="cz-input-prefix"><span>$</span><input type="text" id="clientIncome" placeholder="Opcional · precalificación" inputmode="numeric"></div>
+            </div>
+          </div>
+
+          <div class="cz-advisor">
+            <div class="cz-advisor-head">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>Asesor comercial <small>(se guarda en este dispositivo)</small></span>
+            </div>
+            <div class="cz-grid-2">
+              <div class="cz-field">
+                <label class="cz-label" for="advisorName">Nombre del asesor</label>
+                <input type="text" id="advisorName" placeholder="Tu nombre">
+              </div>
+              <div class="cz-field">
+                <label class="cz-label" for="advisorPhone">WhatsApp del asesor</label>
+                <div class="cz-input-prefix"><span>+52</span><input type="tel" id="advisorPhone" placeholder="55 2250 0741" inputmode="numeric"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- COMPARATIVA DE ENGANCHES -->
+        <section class="cz-card" aria-labelledby="h-compare">
+          <div class="cz-card-head">
+            <span class="cz-step-num cz-step-num--alt">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </span>
+            <div>
+              <h2 id="h-compare" class="cz-card-title">Comparativa de enganches</h2>
+              <p class="cz-card-sub">Toca una fila para aplicarla. Se incluye también en el PDF.</p>
+            </div>
+          </div>
+          <div class="cz-table-wrap">
+            <table class="cz-table" id="compareTable">
+              <thead>
+                <tr>
+                  <th>Enganche</th>
+                  <th>Monto</th>
+                  <th id="thFinance">A financiar</th>
+                  <th id="thMonthly">Mensualidad</th>
+                  <th id="thIncome">Ingreso sugerido</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <!-- ===================== COLUMNA DERECHA: RESUMEN ===================== -->
+      <aside class="cz-summary" id="summaryPanel" aria-label="Resumen de la cotización">
+        <div class="cz-summary-card">
+          <div class="cz-summary-top">
+            <span class="cz-summary-eyebrow">Resumen de cotización</span>
+            <h2 class="cz-summary-title" id="sumTitle">Selecciona un lote</h2>
+            <p class="cz-summary-meta" id="sumMeta">—</p>
+          </div>
+
+          <div class="cz-summary-hero" id="sumHero">
+            <span class="cz-hero-label" id="sumHeroLabel">Mensualidad estimada</span>
+            <span class="cz-hero-value" id="sumHeroValue">$0</span>
+            <span class="cz-hero-sub" id="sumHeroSub">—</span>
+          </div>
+
+          <dl class="cz-summary-rows">
+            <div><dt>Precio de lista</dt><dd id="sumList">$0</dd></div>
+            <div id="rowDiscount" hidden><dt>Descuento</dt><dd id="sumDiscount" class="neg">$0</dd></div>
+            <div class="strong"><dt>Precio final</dt><dd id="sumPrice">$0</dd></div>
+            <div><dt id="sumDownLabel">Enganche</dt><dd id="sumDown">$0</dd></div>
+            <div class="sub"><dt>Apartado</dt><dd id="sumHold">$0</dd></div>
+            <div class="sub"><dt id="sumDeferLabel">Saldo de enganche</dt><dd id="sumDefer">$0</dd></div>
+            <div class="strong"><dt id="sumFinanceLabel">Monto a financiar</dt><dd id="sumFinance">$0</dd></div>
+            <div><dt>Gastos de escrituración (est.)</dt><dd id="sumClosing">$0</dd></div>
+            <div class="accent"><dt>Desembolso inicial total</dt><dd id="sumInitial">$0</dd></div>
+          </dl>
+
+          <div class="cz-terms" id="termsCompare"></div>
+
+          <div class="cz-qualify" id="qualifyBox" hidden></div>
+
+          <div class="cz-actions">
+            <button type="button" class="cz-btn cz-btn-wa" id="btnWhatsApp">
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
+              <span>Enviar por WhatsApp</span>
+            </button>
+            <div class="cz-actions-row">
+              <button type="button" class="cz-btn cz-btn-light" id="btnPdf">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Descargar PDF</span>
+              </button>
+              <button type="button" class="cz-btn cz-btn-light" id="btnCopy">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Copiar</span>
+              </button>
+            </div>
+          </div>
+
+          <p class="cz-disclaimer">Cifras estimadas con fines informativos. La mensualidad no incluye seguros, comisiones ni CAT; está sujeta a la aprobación y condiciones de cada institución financiera. Precios sujetos a cambio sin previo aviso.</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Barra inferior móvil -->
+  <div class="cz-mobile-bar" id="mobileBar">
+    <div>
+      <span class="cz-mb-label" id="mbLabel">Mensualidad estimada</span>
+      <strong id="mbValue">$0</strong>
+    </div>
+    <button type="button" class="cz-btn cz-btn-wa cz-btn-sm" id="mbGo">Ver resumen</button>
+  </div>
+
+  <!-- Drawer de historial -->
+  <dialog class="cz-drawer" id="historyDrawer" aria-labelledby="h-history">
+    <div class="cz-drawer-head">
+      <h2 id="h-history">Cotizaciones recientes</h2>
+      <button type="button" class="cz-icon-btn" id="btnCloseHistory" aria-label="Cerrar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="cz-history-list" id="historyList"></ul>
+  </dialog>
+
+  <div class="cz-toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" defer></script>
+  <script src="/cotizador/cotizador.js?v=1.0" defer></script>
+</body>
+</html>
