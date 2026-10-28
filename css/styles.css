@@ -102,6 +102,9 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -111,6 +114,8 @@ body {
   line-height: 1.65;
   font-weight: 400;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -270,6 +275,8 @@ p {
   position: relative;
   overflow: hidden;
   min-height: 48px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .btn-primary {
@@ -3178,6 +3185,62 @@ dialog.custom-modal-wide {
 }
 
 @media (max-width: 768px) {
+  /* Botones Generales en Móvil (Evita desborde y saltos bruscos) */
+  .btn {
+    padding: 0.85rem 1.35rem;
+    font-size: 0.85rem;
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+    word-break: normal;
+    overflow-wrap: break-word;
+    line-height: 1.25;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+  .project-overview-grid .btn {
+    width: 100%;
+  }
+  .form-submit-row .btn {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  /* Carrusel de Modelos y Pastillas */
+  .models-carousel-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+  .models-carousel-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.4rem;
+    gap: 0.45rem;
+    width: 100%;
+  }
+  .models-carousel-pills::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel-pill-btn {
+    flex-shrink: 0;
+    padding: 0.55rem 0.95rem;
+    font-size: 0.82rem;
+  }
+  .models-carousel-nav-arrows {
+    align-self: flex-end;
+  }
+
   .amenities-cards-grid {
     grid-template-columns: 1fr;
   }
@@ -3190,13 +3253,6 @@ dialog.custom-modal-wide {
   }
   .hero-section {
     padding-top: 6.5rem;
-  }
-  .hero-cta-group {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .hero-cta-group .btn {
-    width: 100%;
   }
   .hero-cintillo-banner {
     margin-bottom: 1.5rem;
@@ -3265,6 +3321,36 @@ dialog.custom-modal-wide {
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .btn {
+    padding: 0.8rem 1rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  h1 {
+    font-size: clamp(1.95rem, 7.5vw, 2.5rem);
+    line-height: 1.15;
+  }
+  h2 {
+    font-size: clamp(1.65rem, 6vw, 2.1rem);
+    line-height: 1.2;
+  }
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
+  .hero-badges-row {
+    gap: 0.45rem;
+  }
+  .hero-badge-item {
+    font-size: 0.76rem;
+    padding: 0.38rem 0.75rem;
+  }
   .top-brand-logo-img {
     height: 27px;
     max-width: 130px;
@@ -3298,6 +3384,82 @@ dialog.custom-modal-wide {
   .cintillo-badge {
     font-size: 0.6rem;
     padding: 0.2rem 0.45rem;
+  }
+
+  /* Tarjeta de Modelos en Smartphone: Botones apilados al 100% y Specs sin desborde */
+  .model-card-content {
+    padding: 1.15rem 1rem 1.25rem;
+  }
+  .model-actions-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.55rem;
+  }
+  .btn-model-wa,
+  .btn-model-plan {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+  }
+  .model-specs-bar {
+    padding: 0.5rem 0.25rem;
+    gap: 0.2rem;
+  }
+  .spec-bar-item .sbi-label {
+    font-size: 0.58rem;
+  }
+  .spec-bar-item .sbi-val {
+    font-size: clamp(0.7rem, 2.4vw, 0.8rem);
+    white-space: normal;
+    line-height: 1.15;
+    word-break: break-word;
+  }
+
+  /* Conectividad y Tiempos */
+  .commute-card {
+    padding: 0.85rem 0.95rem;
+    gap: 0.65rem;
+  }
+  .commute-info-left {
+    gap: 0.75rem;
+  }
+  .commute-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .commute-destination {
+    font-size: 0.92rem;
+  }
+  .commute-time-value {
+    font-size: 1.45rem;
+  }
+
+  /* Formulario y Modales */
+  .lead-form-card {
+    padding: 1.5rem 1rem;
+  }
+  .form-input, .form-select, .form-textarea {
+    padding: 0.75rem 0.95rem;
+    font-size: 0.88rem;
+  }
+  .mobile-drawer {
+    padding: 1.25rem 1.1rem 1.75rem;
+    max-width: 100vw;
+  }
+  .custom-modal {
+    width: 95% !important;
+    margin: 1rem auto !important;
+  }
+  .modal-header-bar {
+    padding: 1rem 1.15rem;
+  }
+  .modal-header-bar h3 {
+    font-size: 1.1rem;
+    line-height: 1.25;
+  }
+  .modal-body {
+    padding: 1rem 0.85rem !important;
   }
 }
 
@@ -3845,5 +4007,70 @@ dialog.custom-modal-wide {
   .plano-canvas img {
     max-height: 360px;
   }
+  .inventory-kpi-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem;
+  }
 }
+
+@media (max-width: 768px) {
+  .plano-spec-pills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem 0.5rem;
+    padding: 0.85rem 1rem;
+  }
+  .plano-spec-pills .spec-pill:last-child {
+    grid-column: 1 / -1;
+  }
+  .btn-tech-plan {
+    font-size: 0.82rem;
+    padding: 0.8rem 0.85rem;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.25;
+  }
+  .boutique-conversion-box {
+    padding: 1.25rem 1rem;
+  }
+  .conversion-buttons .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    padding: 0.85rem 1rem;
+    font-size: 0.84rem;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 480px) {
+  .inventory-kpi-bar {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .inventory-kpi-card {
+    padding: 1rem 1rem;
+  }
+  .kpi-number {
+    font-size: 1.85rem;
+  }
+  .kpi-title {
+    font-size: 0.9rem;
+  }
+  .plano-card-header {
+    padding: 0.85rem 1rem;
+  }
+  .plano-card-title {
+    font-size: 0.88rem;
+  }
+  .plano-zoom-btn {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.65rem;
+  }
+}
+
 
