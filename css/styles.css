@@ -931,7 +931,7 @@ p {
   font-size: clamp(1.15rem, 1.8vw, 1.35rem);
   font-weight: 300;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
   max-width: 720px;
 }
 
@@ -2923,7 +2923,7 @@ dialog.custom-modal-wide {
 }
 
 /* --------------------------------------------------------------------------
-   18C. AMENIDADES DEL FRACCIONAMIENTO BOUTIQUE (230 M² JARDÍN COMÚN)
+   18C. AMENIDADES DEL FRACCIONAMIENTO (230 M² JARDÍN COMÚN)
    -------------------------------------------------------------------------- */
 .amenities-section {
   background-color: var(--color-mineral-white);

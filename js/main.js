@@ -796,7 +796,7 @@ function triggerBrochureDownload() {
 MOTUL ESPACIOS RESIDENCIALES — OCOYOACAC, ESTADO DE MÉXICO
 DOSSIER EJECUTIVO DE PREVENTA & FICHA TÉCNICA
 ================================================================================
-Condominio Residencial Horizontal Boutique de solo 14 Casas.
+Condominio Residencial Horizontal Privado de solo 14 Casas.
 Avenida 5 de mayo #21, Colonia Juárez, Ocoyoacac, Estado de México (C.P. 52740).
 A solo 300 metros de la Autopista México–Toluca (Zona de Los Encinos).
 

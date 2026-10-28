@@ -800,7 +800,7 @@
       'Certificación internacional EDGE Advanced',
       'Paneles solares y vivienda 100% libre de gas',
       'Cocina con parrilla de inducción magnética',
-      'Condominio boutique de solo 14 residencias',
+      'Condominio residencial privado de solo 14 residencias',
       'Jardín común de 230 m² con palapa y asadores',
       'Acceso controlado y seguridad 24/7',
       'A 300 m de la autopista México–Toluca'.replace('–', '-')
