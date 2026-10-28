@@ -4,7 +4,6 @@
 ## Información General y Ficha Técnica
 - [Inicio y Vista General](https://espaciosmotul.mx/): Fraccionamiento privado de 14 residencias unifamiliares con terrenos de 140 m² a 228.92 m² y construcciones desde 190 m² hasta 231.21 m² habitables.
 - [Plano Maestro y Lotes](https://espaciosmotul.mx/#plano-general): Distribución de los 14 lotes residenciales, orientaciones solares y estatus de disponibilidad.
-- [Cotizador Financiero](https://espaciosmotul.mx/cotizador/): Simulador en línea para calcular enganches (10% a 50%), crédito bancario con Hipoteca Verde y mensualidades estimadas con amortización en tiempo real.
 
 ## Modelos Arquitectónicos Oficiales
 - **Modelo A (215.76 m² de construcción)**: 3 niveles, 3 recámaras con baño privado, estancia abierta hacia jardín posterior, cocina de inducción y roof garden panorámico en el tercer nivel. Lotes tipo: 140 m² y 154 m².

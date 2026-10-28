@@ -6,40 +6,61 @@
 # 1. Reglas Generales para Rastreadores Web (Google, Bing, Yahoo, DuckDuckGo)
 User-agent: *
 Allow: /
+Disallow: /cotizador/
+Disallow: /cotizador
 Disallow: /assets/private/
 
 # 2. Rastreadores Específicos de Búsqueda de Inteligencia Artificial (GEO / Citaciones)
 # ChatGPT Search / OpenAI Live Retrieval
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /cotizador/
+Disallow: /cotizador
 
 # Perplexity AI Search & Citations
 User-agent: PerplexityBot
 Allow: /
+Disallow: /cotizador/
+Disallow: /cotizador
 
 # Claude Search / Anthropic Live Web Retrieval
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /cotizador/
+Disallow: /cotizador
 
 # Microsoft Copilot & Bing AI
 User-agent: Bingbot
 Allow: /
+Disallow: /cotizador/
+Disallow: /cotizador
 
 # Google Gemini & Google AI Overviews
 User-agent: Googlebot
 Allow: /
+Disallow: /cotizador/
+Disallow: /cotizador
+
 User-agent: Google-Extended
 Allow: /
+Disallow: /cotizador/
+Disallow: /cotizador
 
 # Modelos Fundacionales / Rastreadores de Entrenamiento
 User-agent: GPTBot
 Allow: /
+Disallow: /cotizador/
+Disallow: /cotizador
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /cotizador/
+Disallow: /cotizador
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /cotizador/
+Disallow: /cotizador
 
 # 3. Referencias Canónicas y Estándar de Lenguaje para Modelos (LLMs)
 Sitemap: https://espaciosmotul.mx/sitemap.xml

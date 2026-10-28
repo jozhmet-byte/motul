@@ -53,12 +53,4 @@
       <image:caption>Sembrado arquitectónico oficial de terrenos desde 140 m² hasta 228.92 m²</image:caption>
     </image:image>
   </url>
-
-  <!-- Cotizador Interactivo Oficial -->
-  <url>
-    <loc>https://espaciosmotul.mx/cotizador/</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 </urlset>
