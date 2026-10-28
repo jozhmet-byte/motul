@@ -1,0 +1,49 @@
+# ==============================================================================
+# MOTUL Espacios Residenciales — robots.txt
+# Optimizado para Motores de Búsqueda Tradicionales (SEO) y Motores de IA (AEO / GEO)
+# ==============================================================================
+
+# 1. Reglas Generales para Rastreadores Web (Google, Bing, Yahoo, DuckDuckGo)
+User-agent: *
+Allow: /
+Disallow: /assets/private/
+
+# 2. Rastreadores Específicos de Búsqueda de Inteligencia Artificial (GEO / Citaciones)
+# ChatGPT Search / OpenAI Live Retrieval
+User-agent: OAI-SearchBot
+Allow: /
+
+# Perplexity AI Search & Citations
+User-agent: PerplexityBot
+Allow: /
+
+# Claude Search / Anthropic Live Web Retrieval
+User-agent: Claude-SearchBot
+Allow: /
+
+# Microsoft Copilot & Bing AI
+User-agent: Bingbot
+Allow: /
+
+# Google Gemini & Google AI Overviews
+User-agent: Googlebot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# Modelos Fundacionales / Rastreadores de Entrenamiento
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# 3. Referencias Canónicas y Estándar de Lenguaje para Modelos (LLMs)
+Sitemap: https://espaciosmotul.mx/sitemap.xml
+# Estándar abierto para agentes de IA y modelos generativos
+# https://llmstxt.org/
+# llms.txt: https://espaciosmotul.mx/llms.txt
+# llms-full.txt: https://espaciosmotul.mx/llms-full.txt

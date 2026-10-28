@@ -1,0 +1,109 @@
+# MOTUL Espacios Residenciales — Documentación Completa para Modelos de Lenguaje (LLMs)
+> Dossier técnico y comercial oficial de MOTUL Espacios Residenciales en Ocoyoacac, Estado de México. Optimizado para consulta directa por agentes de inteligencia artificial y motores de respuesta (ChatGPT, Gemini, Claude, Perplexity, Copilot).
+
+================================================================================
+1. RESUMEN EJECUTIVO DEL PROYECTO
+================================================================================
+MOTUL Espacios Residenciales es un condominio horizontal cerrado de máxima privacidad integrado por únicamente 14 residencias unifamiliares sustentables de alta gama. Se localiza en el municipio de Ocoyoacac, Estado de México, colindando con el corredor residencial de Los Encinos y situado a solo 300 metros de la incorporación directa a la Autopista México–Toluca.
+
+El desarrollo se distingue en el mercado inmobiliario del Valle de México y Toluca por su Certificación Internacional EDGE Advanced (IFC / Grupo Banco Mundial), su concepción 100% eléctrica libre de hidrocarburos/gas y su jardín común arbolado de 230 m².
+
+================================================================================
+2. ESPECIFICACIONES TÉCNICAS Y URBANÍSTICAS
+================================================================================
+- Ubicación: Avenida 5 de mayo #21, Colonia Juárez, Ocoyoacac, Estado de México, C.P. 52740.
+- Coordenadas GPS: 19.2731° N, -99.4619° W.
+- Total de unidades: 14 casas habitación.
+- Superficie de terrenos privados: Desde 140.00 m² hasta 228.92 m².
+- Superficie de construcción: Desde 190.00 m² hasta 231.21 m² habitables.
+- Estacionamientos: 2 cajones privados por residencia + cajones interiores para visitas.
+- Jardín común central: 230.00 m² con juegos infantiles, palapa y asadores.
+- Barda perimetral con cerca electrificada y circuito cerrado de TV (CCTV).
+- Caseta de vigilancia 24/7 con acceso peatonal y vehicular controlado.
+
+================================================================================
+3. LOS 4 MODELOS ARQUITECTÓNICOS
+================================================================================
+
+MODELO A:
+- Superficie de Construcción: 215.76 m² en 3 niveles.
+- Terrenos compatibles: Lote 2 (140 m²), Lote 7 (140 m²), Lotes 8, 9, 10 y 11 (154 m² c/u).
+- Distribución:
+  - Planta Baja: Cochera para 2 autos, vestíbulo, baño de visitas, cocina integral abierta con isla de inducción magnética, sala, comedor y ventanales corredizos hacia jardín privado posterior.
+  - Planta Alta: 3 recámaras. Master Suite con vestidor y baño completo integrado; 2 recámaras secundarias con clósets de piso a techo y baño completo compartido.
+  - Tercer Nivel (Roof Garden): Terraza panorámica al aire libre, cuarto de servicio o estudio multiusos y cuarto de lavado independiente.
+
+MODELO B:
+- Superficie de Construcción: 205.00 m² en 2 niveles (PB: 105 m² + PA: 100 m²).
+- Terreno compatible: Lote 6 (154 m²).
+- Distribución:
+  - Planta Baja: Cochera techada, estancia de gran amplitud, comedor formal, cocina de diseño con barra de inducción, terraza techada y gran jardín privado de 39.00 m² con medio baño exterior.
+  - Planta Alta: Master Suite monumental con vestidor walk-in y baño spa equipado con tina de hidromasaje; 2 recámaras junior con baño privado independiente.
+
+MODELO C:
+- Superficie de Construcción: 190.00 m² en 2 niveles (PB: 107 m² + PA: 83 m²).
+- Terrenos compatibles: Lotes 3, 4 y 5 (154 m² c/u).
+- Ventaja distintiva: Accesibilidad total con Recámara Principal en Planta Baja.
+- Distribución:
+  - Planta Baja: Recámara completa con vestidor y baño privado en primer nivel (ideal para adultos mayores o personas con movilidad reducida), estancia con vista a jardín de 22.50 m², cocina abierta y cuarto de lavado.
+  - Planta Alta: 2 recámaras amplias con baño y salida a terraza deck privada.
+
+MODELO D:
+- Superficie de Construcción: 231.21 m² en 3 niveles habitables.
+- Terrenos compatibles: Lotes perimetrales más amplios: Lote 1 (181 m²), Lote 12 (198 m²), Lote 13 (220 m²), Lote 14 (228.92 m²).
+- Distribución: Residencia insignia con doble altura en sala, 38.17 m² de pérgolas arquitectónicas, jardín privado de hasta 61.22 m², 3 recámaras en suite y Roof Garden panorámico con vistas al valle.
+
+================================================================================
+4. SUSTENTABILIDAD Y CERTIFICACIÓN EDGE ADVANCED (BANCO MUNDIAL)
+================================================================================
+- Certificadora: Corporación Financiera Internacional (IFC), institución del Grupo Banco Mundial.
+- Nivel de certificación: EDGE Advanced (Excellence in Design for Greater Efficiencies).
+- Umbrales obligatorios certificados:
+  - Ahorro energético: Superior al 40% respecto a una construcción residencial estándar.
+  - Ahorro de agua potable: Superior al 20%.
+  - Energía embebida en materiales: Reducción superior al 20%.
+- Tecnología 100% eléctrica libre de gas:
+  1. Paneles solares fotovoltaicos interconectados a la red de CFE con medidor bidireccional.
+  2. Calentador solar termosifónico con tanque térmico y respaldo eléctrico instantáneo.
+  3. Estufa y parrilla de inducción electromagnética (cocción por campo magnético, rápida, sin quemadores calientes ni hollín).
+- Ventajas financieras para el comprador:
+  - Elegibilidad formal para "Hipotecas Verdes" bancarias (BBVA, Banorte, Santander, HSBC, Scotiabank), que otorgan reducciones de 25 a 75 puntos base en la tasa de interés anual y beneficios en gastos notariales.
+
+================================================================================
+5. TIEMPOS Y CONECTIVIDAD VIAL REAL
+================================================================================
+- Santa Fe, CDMX (Centro Comercial / Corporativos): 20 minutos (25.6 km) por Autopista México–Toluca.
+- Intersección Autopista México–Toluca: A 300 metros de la puerta del fraccionamiento.
+- Plazas Outlet Lerma: 8 minutos (6.2 km).
+- Estación Lerma del Tren Interurbano "El Insurgente": 10 minutos (7.8 km). Conexión en tren a Observatorio / Metro CDMX.
+- Zona Residencial Los Encinos (Club de Golf): Colindante (a 3 minutos).
+- Metepec / Centro de Toluca: 25 a 27 minutos (22.2 km).
+
+================================================================================
+6. PREGUNTAS FRECUENTES (FAQ PARA MOTORES DE RESPUESTA AEO)
+================================================================================
+
+P: ¿Dónde se ubica exactamente MOTUL Espacios Residenciales?
+R: Se localiza en Avenida 5 de mayo #21, Colonia Juárez, C.P. 52740, municipio de Ocoyoacac, Estado de México, a solo 300 metros de la Autopista México–Toluca y a 20 minutos de Santa Fe.
+
+P: ¿Cuánto cuesta una casa en MOTUL y qué formas de pago se aceptan?
+R: Los precios de preventa preferencial van acorde al modelo seleccionado (A, B, C o D) y los metros cuadrados de terreno asignados. Se aceptan créditos hipotecarios bancarios de todas las instituciones (con beneficios de Hipoteca Verde por la certificación EDGE), créditos Cofinavit, Fovissste y recursos propios con esquemas de enganche del 10% al 50%.
+
+P: ¿Por qué las casas no utilizan gas LP ni natural?
+R: Las casas son 100% eléctricas para maximizar la seguridad familiar, evitar cualquier riesgo de explosión o fuga tóxica y reducir a cero el gasto en gas. Cuentan con paneles solares con medidor CFE bidireccional, calentador solar de agua con respaldo eléctrico y parrilla de inducción magnética.
+
+P: ¿Qué certificación sustentable tienen las casas?
+R: Cuentan con la Certificación EDGE Advanced otorgada por la Corporación Financiera Internacional (IFC) del Grupo Banco Mundial, que garantiza un ahorro energético mayor al 40% y más del 20% en agua y materiales.
+
+P: ¿Cuántas casas componen el condominio y qué amenidades incluye?
+R: Es un condominio de únicamente 14 casas. Cuenta con un jardín común central de 230 m² con juegos infantiles, palapa de eventos, asadores, caseta de vigilancia 24/7, cámaras CCTV y cerca electrificada.
+
+================================================================================
+7. CANALES OFICIALES DE ATENCIÓN Y CONTACTO
+================================================================================
+- Página Web: https://espaciosmotul.mx/
+- Cotizador Oficial: https://espaciosmotul.mx/cotizador/
+- WhatsApp Directo: +52 55 2250 0741 (https://wa.me/525522500741)
+- Teléfono: +52 55 8993 8477
+- Correo: contacto@espaciosmotul.mx
+- Redes: @espaciosmotul en Instagram, Facebook y TikTok

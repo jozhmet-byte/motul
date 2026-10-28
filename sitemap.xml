@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Página Principal / Landing Page Oficial -->
+  <url>
+    <loc>https://espaciosmotul.mx/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://espaciosmotul.mx/assets/images/real_fachada_conjunto.jpg</image:loc>
+      <image:title>Fachada del conjunto residencial MOTUL Espacios Residenciales en Ocoyoacac</image:title>
+      <image:caption>Condominio horizontal privado de 14 residencias sustentables en Ocoyoacac, Estado de México</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://espaciosmotul.mx/assets/images/real_fachada_principal.jpg</image:loc>
+      <image:title>Fachada principal de residencia MOTUL</image:title>
+      <image:caption>Arquitectura contemporánea con acabados de lujo y certificación internacional EDGE Advanced</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://espaciosmotul.mx/assets/images/real_jardin_comun.jpg</image:loc>
+      <image:title>Jardín común de 230 m² en MOTUL Espacios Residenciales</image:title>
+      <image:caption>Área verde central equipada con juegos infantiles, palapa de eventos y asadores</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://espaciosmotul.mx/assets/images/real_acceso.jpg</image:loc>
+      <image:title>Caseta de acceso y vigilancia 24 horas</image:title>
+      <image:caption>Seguridad integral con circuito cerrado CCTV y barda electrificada en Ocoyoacac</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://espaciosmotul.mx/assets/images/real_interior_sala.jpg</image:loc>
+      <image:title>Interior sala y estancia principal</image:title>
+      <image:caption>Espacios amplios y luminosos con conexión directa a terraza y jardín privado</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://espaciosmotul.mx/assets/images/real_cocina_induccion.jpg</image:loc>
+      <image:title>Cocina integral contemporánea 100% eléctrica</image:title>
+      <image:caption>Parrilla de inducción magnética moderna y segura, libre de consumo de gas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://espaciosmotul.mx/assets/images/real_recamara_principal.jpg</image:loc>
+      <image:title>Master Suite con vestidor</image:title>
+      <image:caption>Recámara principal amplia con iluminación natural y baño privado de lujo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://espaciosmotul.mx/assets/images/real_roof_garden.jpg</image:loc>
+      <image:title>Roof Garden panorámico</image:title>
+      <image:caption>Terraza en tercer nivel con vistas panorámicas al valle y montañas de Ocoyoacac</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://espaciosmotul.mx/assets/images/plano_conjunto_horizontal_clean.jpg</image:loc>
+      <image:title>Plano general y distribución de 14 lotes</image:title>
+      <image:caption>Sembrado arquitectónico oficial de terrenos desde 140 m² hasta 228.92 m²</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Cotizador Interactivo Oficial -->
+  <url>
+    <loc>https://espaciosmotul.mx/cotizador/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

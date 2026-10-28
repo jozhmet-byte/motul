@@ -54,11 +54,45 @@
   <link rel="shortcut icon" href="favicon.ico">
   <meta name="theme-color" content="#1E3A2F">
 
-  <!-- JSON-LD DATOS ESTRUCTURADOS (SCHEMA.ORG) -->
+  <!-- Enlaces de Descubrimiento para Rastreadores y Motores de IA (SEO & GEO) -->
+  <link rel="sitemap" type="application/xml" title="Sitemap Oficial" href="https://espaciosmotul.mx/sitemap.xml">
+  <link rel="alternate" type="text/markdown" href="https://espaciosmotul.mx/llms.txt" title="Documentación para Modelos de Lenguaje / IA (llms.txt)">
+
+  <!-- JSON-LD DATOS ESTRUCTURADOS (SCHEMA.ORG GRAPH PARA SEO, AEO Y GEO) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
+      {
+        "@type": "RealEstateAgent",
+        "@id": "https://espaciosmotul.mx/#organization",
+        "name": "MOTUL Espacios Residenciales",
+        "legalName": "MOTUL Espacios Residenciales",
+        "url": "https://espaciosmotul.mx/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://espaciosmotul.mx/assets/images/logo_motul_bco.png",
+          "width": "220",
+          "height": "40"
+        },
+        "image": "https://espaciosmotul.mx/assets/images/real_fachada_conjunto.jpg",
+        "description": "Desarrollador y fraccionamiento residencial sustentable de 14 casas unifamiliares con Certificación Internacional EDGE Advanced en Ocoyoacac, Estado de México.",
+        "telephone": "+52-55-2250-0741",
+        "email": "contacto@espaciosmotul.mx",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Avenida 5 de mayo #21, Colonia Juárez",
+          "addressLocality": "Ocoyoacac",
+          "addressRegion": "Estado de México",
+          "postalCode": "52740",
+          "addressCountry": "MX"
+        },
+        "sameAs": [
+          "https://www.instagram.com/espaciosmotul/",
+          "https://www.facebook.com/espaciosmotul",
+          "https://www.tiktok.com/@espaciosmotul"
+        ]
+      },
       {
         "@type": "RealEstateListing",
         "@id": "https://espaciosmotul.mx/#listing",
@@ -75,7 +109,7 @@
           "floorSize": {
             "@type": "QuantitativeValue",
             "minValue": 190,
-            "maxValue": 231,
+            "maxValue": 231.21,
             "unitCode": "MTK"
           },
           "amenityFeature": [
@@ -137,7 +171,12 @@
             "@type": "GeoCoordinates",
             "latitude": 19.2731,
             "longitude": -99.4619
-          }
+          },
+          "sameAs": [
+            "https://es.wikipedia.org/wiki/Ocoyoacac",
+            "https://es.wikipedia.org/wiki/Certificaci%C3%B3n_EDGE",
+            "https://es.wikipedia.org/wiki/Corporaci%C3%B3n_Financiera_Internacional"
+          ]
         }
       },
       {
@@ -153,7 +192,107 @@
           "addressRegion": "Estado de México",
           "postalCode": "52740",
           "addressCountry": "MX"
-        }
+        },
+        "sameAs": [
+          "https://es.wikipedia.org/wiki/Ocoyoacac",
+          "https://es.wikipedia.org/wiki/Autopista_M%C3%A9xico-Toluca"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://espaciosmotul.mx/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://espaciosmotul.mx/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "El Proyecto",
+            "item": "https://espaciosmotul.mx/#el-proyecto"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Plano General",
+            "item": "https://espaciosmotul.mx/#plano-general"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Sustentabilidad EDGE",
+            "item": "https://espaciosmotul.mx/#sustentabilidad"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Modelos & Planos",
+            "item": "https://espaciosmotul.mx/#modelos"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Cotizador Comercial",
+            "item": "https://espaciosmotul.mx/cotizador/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://espaciosmotul.mx/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Dónde se ubica exactamente MOTUL Espacios Residenciales y cuáles son los accesos principales?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MOTUL Espacios Residenciales se ubica en Avenida 5 de mayo #21, Colonia Juárez, Ocoyoacac, Estado de México (C.P. 52740), colindando con Los Encinos y a solo 300 metros de la Autopista México–Toluca. Permite llegar a Santa Fe en 20 minutos (25.6 km), a Toluca Centro en 27 minutos (22.2 km), a la estación del Tren Interurbano El Insurgente en 10 minutos y a Plazas Outlet Lerma en 8 minutos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué significa la Certificación EDGE Advanced y qué ventajas concretas aporta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La Certificación EDGE Advanced es otorgada por la Corporación Financiera Internacional (IFC) del Grupo Banco Mundial. Garantiza que cada casa ahorra más del 40% en energía eléctrica y más del 20% en agua potable y energía embebida en materiales. Permite eliminar facturas de gas, reducir al mínimo el recibo de CFE y calificar a Hipotecas Verdes bancarias con tasas de interés preferenciales."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Por qué las residencias no consumen gas y qué equipamiento sustituto incluyen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Las residencias son 100% eléctricas para eliminar riesgos de explosión, fuga o monóxido de carbono y abatir costos fijos. Incluyen paneles solares fotovoltaicos interconectados a CFE con medidor bidireccional, calentador solar de agua de alta eficiencia con respaldo eléctrico instantáneo y parrilla contemporánea de inducción magnética."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuáles son los 4 modelos residenciales y sus características principales?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MOTUL ofrece 4 modelos: Modelo A (215.76 m² en 3 niveles con roof garden panorámico en lotes de 140 m² y 154 m²); Modelo B (205.00 m² en 2 niveles con jardín privado de 39 m² y Master Suite con tina de hidromasaje en lote de 154 m²); Modelo C (190.00 m² en 2 niveles con recámara completa en planta baja y jardín de 22.5 m²); y Modelo D (231.21 m² en 3 niveles con doble altura, 38 m² de pérgolas y jardín de hasta 61.22 m² en lotes de hasta 228.92 m²)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué amenidades y áreas comunes incluye el condominio de 14 casas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El condominio cuenta con un jardín común central de 230 m² equipado con juegos infantiles seguros, palapa techada para eventos, asadores y baños de servicio; caseta de acceso y vigilancia privada 24/7 con circuito cerrado CCTV, barda electrificada, estacionamiento para visitas y cuarto de separación de residuos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué formas de pago, créditos hipotecarios y descuentos de preventa aplican?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Se aceptan créditos hipotecarios de todas las instituciones bancarias (BBVA, Banorte, Santander, Scotiabank, HSBC con beneficios de Hipoteca Verde), créditos Cofinavit, Fovissste y esquemas con recursos propios. Se manejan enganches desde el 10% hasta el 50% con precios y descuentos preferenciales congelados de preventa."
+            }
+          }
+        ]
       }
     ]
   }
