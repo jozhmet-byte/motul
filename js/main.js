@@ -136,20 +136,20 @@ function initScrollSpy() {
    3.5. PLANO GENERAL DEL DESARROLLO & GESTIÓN DE INVENTARIO
    -------------------------------------------------------------------------- */
 const masterPlanLots = [
-  { lote: 1, m2: 181.00, status: 'preventa', label: 'PREVENTA', highlight: 'Esquina cabecera · Frente amplio', desc: 'Lote cabecera con máxima iluminación y amplitud de fachada.' },
-  { lote: 2, m2: 140.00, status: 'venta', label: 'VENTA', highlight: 'Venta Inmediata · 140 m²', desc: 'Ubicación ágil y acceso inmediato al pórtico de seguridad.' },
+  { lote: 1, m2: 181.00, status: 'preventa', label: 'PREVENTA', highlight: 'Modelo D · 181 m²', desc: 'Lote cabecera con modelo insignia D (231.21 m² const., Entrega 6 meses).' },
+  { lote: 2, m2: 140.00, status: 'venta', label: 'ENTREGA INMEDIATA', highlight: 'Modelo A · Inmediata', desc: 'Residencia Modelo A (215.76 m²) lista para entrega inmediata en terreno de 140 m².' },
   { lote: 3, m2: 140.00, status: 'vendido', label: 'VENDIDO', highlight: 'Residencia Consolidada', desc: 'Lote vendido a propietario residencial.' },
   { lote: 4, m2: 140.00, status: 'vendido', label: 'VENDIDO', highlight: 'Residencia Consolidada', desc: 'Lote vendido a propietario residencial.' },
   { lote: 5, m2: 140.00, status: 'vendido', label: 'VENDIDO', highlight: 'Residencia Consolidada', desc: 'Lote vendido a propietario residencial.' },
   { lote: 6, m2: 140.00, status: 'vendido', label: 'VENDIDO', highlight: 'Residencia Consolidada', desc: 'Lote vendido a propietario residencial.' },
-  { lote: 7, m2: 140.00, status: 'venta', label: 'VENTA', highlight: 'Venta Inmediata · 140 m²', desc: 'Excelente orientación solar central con entorno residencial apacible.' },
-  { lote: 8, m2: 154.00, status: 'preventa', label: 'PREVENTA', highlight: 'Preventa · 154 m²', desc: 'Superficie ideal para Modelo A o Modelo B con jardín privado.' },
-  { lote: 9, m2: 154.00, status: 'preventa', label: 'PREVENTA', highlight: 'Preventa · 154 m²', desc: 'Lote regular de 154 m², cochera para 2 autos y doble acceso.' },
-  { lote: 10, m2: 154.00, status: 'preventa', label: 'PREVENTA', highlight: 'Preventa · 154 m²', desc: 'Frente regular de 154 m² en zona residencial muy tranquila.' },
-  { lote: 11, m2: 154.00, status: 'preventa', label: 'PREVENTA', highlight: 'Preventa · 154 m²', desc: 'Lote extremo poniente, máxima privacidad y sin tránsito cruzado.' },
-  { lote: 12, m2: 211.52, status: 'preventa', label: 'PREVENTA', highlight: 'Gran Terreno · 211.52 m²', desc: 'Manzana norte exclusiva, terreno amplio ideal para Modelo C con Roof Garden.' },
-  { lote: 13, m2: 228.92, status: 'preventa', label: 'PREVENTA', highlight: '¡Lote Insignia! 228.92 m²', desc: 'El terreno más grande del desarrollo, máximo jardín privado y privacidad.' },
-  { lote: 14, m2: 211.80, status: 'preventa', label: 'PREVENTA', highlight: 'Junto a Amenidades · 211.80 m²', desc: 'Colindancia directa al jardín común de 230 m², juegos infantiles y palapa.' }
+  { lote: 7, m2: 140.00, status: 'venta', label: 'ENTREGA 3 MESES', highlight: 'Modelo A · 3 Meses', desc: 'Residencia Modelo A (215.76 m²) con entrega a 3 meses en terreno de 140 m².' },
+  { lote: 8, m2: 154.00, status: 'preventa', label: 'PREVENTA', highlight: 'Modelos A, B o C · 154 m²', desc: 'Superficie de 154 m² con libre elección entre Modelo A, B o C (Entrega 6 meses).' },
+  { lote: 9, m2: 154.00, status: 'preventa', label: 'PREVENTA', highlight: 'Modelos A, B o C · 154 m²', desc: 'Lote regular de 154 m² con libre elección entre Modelo A, B o C (Entrega 6 meses).' },
+  { lote: 10, m2: 154.00, status: 'preventa', label: 'PREVENTA', highlight: 'Modelos A, B o C · 154 m²', desc: 'Frente regular de 154 m² con libre elección entre Modelo A, B o C (Entrega 6 meses).' },
+  { lote: 11, m2: 154.00, status: 'preventa', label: 'PREVENTA', highlight: 'Modelos A, B o C · 154 m²', desc: 'Lote poniente de 154 m² con libre elección entre Modelo A, B o C (Entrega 6 meses).' },
+  { lote: 12, m2: 211.52, status: 'preventa', label: 'PREVENTA', highlight: 'Modelo D · 211.52 m²', desc: 'Manzana norte exclusiva con Modelo D (231.21 m² const., Entrega 6 meses).' },
+  { lote: 13, m2: 220.92, status: 'preventa', label: 'PREVENTA', highlight: 'Modelo D · 220.92 m²', desc: 'El terreno más grande del desarrollo (220.92 m²) con Modelo D (231.21 m² const., Entrega 6 meses).' },
+  { lote: 14, m2: 211.80, status: 'preventa', label: 'PREVENTA', highlight: 'Modelo D · 211.80 m²', desc: 'Colindancia al jardín común con Modelo D (231.21 m² const., Entrega 6 meses).' }
 ];
 
 function initMasterPlanInventory() {
@@ -181,7 +181,7 @@ function initMasterPlanInventory() {
         const waMsg = encodeURIComponent(`Hola, solicito información y precio de preventa para el Lote ${lot.lote} (${areaStr} m²) en MOTUL Espacios Residenciales.`);
         actionHtml = `
           <div style="display:flex;gap:0.4rem;justify-content:flex-end;">
-            <a href="https://wa.me/525589938477?text=${waMsg}" 
+            <a href="https://wa.me/525522500741?text=${waMsg}" 
                target="_blank" 
                rel="noopener noreferrer" 
                class="btn-lot-action action-${lot.status}" 
@@ -262,27 +262,27 @@ function initMasterPlanInventory() {
 }
 
 /* --------------------------------------------------------------------------
-   4. DATA AND LOGIC FOR THE 3 OFFICIAL HOUSE MODELS (A, B, C)
+   4. DATA AND LOGIC FOR THE 4 OFFICIAL HOUSE MODELS (A, B, C, D)
    -------------------------------------------------------------------------- */
 const modelsData = {
   modeloA: {
     id: 'modeloA',
-    name: 'Modelo A · 190 m²',
-    subtitle: '2 Niveles · 3 Recámaras con Suite en Planta Baja y Terraza Lounge',
-    badge: '190 m² Const. · 154 m² Terreno',
-    desc: 'Diseño arquitectónico en 2 plantas con máxima funcionalidad y accesibilidad. Destaca por contar con una recámara en Planta Baja con baño completo y vestidor (ideal para accesibilidad total o huéspedes), estancia integrada con vista a jardín de 22.50 m², cocina de inducción (cero gas) y una gran terraza / deck exterior en Planta Alta con sala lounge y jardineras.',
+    name: 'Modelo A · 215.76 m²',
+    subtitle: '3 Niveles · Lotes 2 y 7 (140 m²) y Lotes 8–11 (154 m²)',
+    badge: '215.76 m² Const. · Desde 140 m² Terreno',
+    desc: 'Arquitectura contemporánea distribuida en 3 niveles con máxima optimización de espacios y luminosidad natural. Diseñada tanto para lotes de 140 m² (Lotes 2 y 7 con entrega inmediata / 3 meses) como de 154 m² (Lotes 8 al 11). Integra estancia abierta con vista a jardín privado, cocina de inducción magnética (100% libre de gas), amplias recámaras familiares con baños completos y un tercer nivel con terraza / roof para convivencia familiar.',
     specs: {
-      construction: '190 m²',
-      terrain: '154 m²',
-      garden: '22.50 m²',
+      construction: '215.76 m²',
+      terrain: '140 m² y 154 m²',
+      garden: 'Jardín Privado',
       parking: '2 Autos',
-      bedrooms: '3 Recámaras (1 en PB)',
+      bedrooms: '3 Recámaras',
       bathrooms: '3 Baños + 1 Sanitario',
-      levels: '2 Plantas'
+      levels: '3 Plantas'
     },
     planImage: 'assets/images/modelos/modelo_a.webp',
     thumbnails: [
-      { src: 'assets/images/modelos/modelo_a.webp', alt: 'Plano Arquitectónico Oficial Modelo A', isPlan: true },
+      { src: 'assets/images/modelos/modelo_a.webp', alt: 'Plano Arquitectónico Oficial Modelo A (215.76 m²)', isPlan: true },
       { src: 'assets/images/real_fachada_conjunto.jpg', alt: 'Fachada Conjunto Residencial' },
       { src: 'assets/images/real_sala_comedor.jpg', alt: 'Estancia Sala & Comedor' },
       { src: 'assets/images/real_recamara_principal.jpg', alt: 'Recámara con Vestidor y Baño' },
@@ -290,36 +290,40 @@ const modelsData = {
     ],
     floorTabs: [
       { key: 'baja', label: 'Planta Baja' },
-      { key: 'alta', label: 'Planta Alta' }
+      { key: 'alta', label: 'Planta Alta' },
+      { key: 'tercer', label: 'Segundo Nivel / Roof' }
     ],
     floors: {
       baja: [
         'Cochera frontal para 2 automóviles',
-        'Cocina contemporánea equipada con estufa de inducción magnética (100% libre de gas)',
-        'Estancia integrada de sala y comedor con vista directa al jardín privado',
-        'Recámara en Planta Baja con baño completo privado y clóset vestidor (accesibilidad)',
-        'Medio baño (sanitario de cortesía) independiente para visitas',
-        'Terraza exterior con acceso directo al jardín privado de 22.50 m²'
+        'Vestíbulo de recepción con medio baño (sanitario de cortesía) independiente',
+        'Cocina de diseño equipada con parrilla de inducción magnética (100% libre de gas)',
+        'Estancia integrada de sala y comedor con ventanales hacia el jardín privado',
+        'Terraza exterior con acceso directo al jardín'
       ],
       alta: [
-        '2 Recámaras secundarias amplias con clósets de diseño y excelente iluminación natural',
-        '2 Baños completos privados (cada recámara cuenta con su propio baño)',
-        'Gran terraza / deck privado superior con sala exterior y jardineras',
-        'Vestíbulo distribuidor y cubo de escaleras iluminado'
+        'Recámaras familiares de excelente escala con clósets completos de madera',
+        'Baños completos privados con acabados porcelánicos y ventilación natural',
+        'Vestíbulo distribuidor central con iluminación natural'
+      ],
+      tercer: [
+        'Tercer nivel con terraza lounge / roof garden exterior',
+        'Espacio polivalente para family room, estudio de trabajo o área social',
+        'Vistas panorámicas hacia el entorno natural del fraccionamiento'
       ]
     }
   },
 
   modeloB: {
     id: 'modeloB',
-    name: 'Modelo B · 205 m²',
-    subtitle: '2 Niveles · Master Suite con Tina y Gran Jardín de 39 m²',
-    badge: '205 m² Const. · 154 m² Terreno',
-    desc: 'Equilibrio perfecto entre amplitud social y confort íntimo. Ofrece una amplísima estancia abierta con ventanales que conectan a una terraza cubierta y un generoso jardín privado de 39 m² con sanitario y bodega exterior. En planta alta, la Master Suite incorpora un lujoso baño tipo spa con tina de hidromasaje, doble lavabo y vestidor walk-in.',
+    name: 'Modelo B · 205.00 m²',
+    subtitle: '2 Niveles · PB 105 m² + PA 100 m² · Gran Jardín de 39 m²',
+    badge: '205.00 m² Const. · 154 m² Terreno',
+    desc: 'Equilibrio perfecto entre amplitud social y confort íntimo en lote de 154 m². Cuenta con 105 m² en Planta Baja y 100 m² en Planta Alta. Ofrece una generosa estancia abierta conectada con canceles corredizos a una terraza cubierta y a un gran jardín privado de 39 m² con sanitario y bodega exterior. En planta alta, la Master Suite incorpora un lujoso baño tipo spa con tina de hidromasaje, doble lavabo y vestidor walk-in.',
     specs: {
-      construction: '205 m²',
+      construction: '205.00 m²',
       terrain: '154 m²',
-      garden: '39 m²',
+      garden: '39.00 m²',
       parking: '2 Autos',
       bedrooms: '3 Recámaras',
       bathrooms: '3 Baños + 1 Sanitario',
@@ -327,15 +331,15 @@ const modelsData = {
     },
     planImage: 'assets/images/modelos/modelo_b.webp',
     thumbnails: [
-      { src: 'assets/images/modelos/modelo_b.webp', alt: 'Plano Arquitectónico Oficial Modelo B', isPlan: true },
+      { src: 'assets/images/modelos/modelo_b.webp', alt: 'Plano Arquitectónico Oficial Modelo B (205.00 m²)', isPlan: true },
       { src: 'assets/images/real_recamara_principal.jpg', alt: 'Master Suite con Tina y Vestidor' },
       { src: 'assets/images/real_bano.jpg', alt: 'Baño de Lujo con Tina y Doble Lavabo' },
       { src: 'assets/images/real_sala_comedor.jpg', alt: 'Estancia Abierta a Jardín 39m²' },
       { src: 'assets/images/real_cocina.jpg', alt: 'Cocina Integral de Inducción' }
     ],
     floorTabs: [
-      { key: 'baja', label: 'Planta Baja' },
-      { key: 'alta', label: 'Planta Alta' }
+      { key: 'baja', label: 'Planta Baja (105 m²)' },
+      { key: 'alta', label: 'Planta Alta (100 m²)' }
     ],
     floors: {
       baja: [
@@ -357,39 +361,84 @@ const modelsData = {
 
   modeloC: {
     id: 'modeloC',
-    name: 'Modelo C · 231 m²',
-    subtitle: '3 Niveles · Doble Terraza, Roof Garden y Gran Jardín de 61 m²',
-    badge: '231 m² Const. · 220 m² Terreno',
-    desc: 'La residencia insignia de mayor metraje en Motul sobre lote de 220 m². Desarrollada en 3 niveles con cochera para 3 autos, doble altura en estancia, majestuoso jardín de 61 m² aprox. y un tercer nivel con Roof Garden panorámico frontal y terraza posterior con vistas al bosque.',
+    name: 'Modelo C · 190.00 m²',
+    subtitle: '2 Niveles · PB 107 m² + PA 83 m² · Suite en PB y Jardín 22.50 m²',
+    badge: '190.00 m² Const. · 154 m² Terreno',
+    desc: 'Diseño arquitectónico en 2 plantas (107 m² en PB y 83 m² en PA) con máxima funcionalidad y accesibilidad. Destaca por contar con una recámara en Planta Baja con baño completo privado y clóset (ideal para personas mayores, visitas o home office), estancia integrada con vista directa a jardín de 22.50 m², cocina de inducción magnética (cero gas) y una gran terraza / deck exterior en Planta Alta.',
     specs: {
-      construction: '231 m²',
-      terrain: '220 m²',
-      garden: '61 m² aprox.',
-      parking: '3 Autos',
+      construction: '190.00 m²',
+      terrain: '154 m²',
+      garden: '22.50 m²',
+      parking: '2 Autos',
+      bedrooms: '3 Recámaras (1 en PB)',
+      bathrooms: '3 Baños + 1 Sanitario',
+      levels: '2 Plantas'
+    },
+    planImage: 'assets/images/modelos/modelo_c.webp',
+    thumbnails: [
+      { src: 'assets/images/modelos/modelo_c.webp', alt: 'Plano Arquitectónico Oficial Modelo C (190.00 m²)', isPlan: true },
+      { src: 'assets/images/real_sala_comedor.jpg', alt: 'Estancia Sala & Comedor' },
+      { src: 'assets/images/real_recamara_principal.jpg', alt: 'Recámara con Vestidor y Baño en PB' },
+      { src: 'assets/images/real_terraza.jpg', alt: 'Terraza Deck Exterior' },
+      { src: 'assets/images/real_cocina.jpg', alt: 'Cocina de Inducción Magnética' }
+    ],
+    floorTabs: [
+      { key: 'baja', label: 'Planta Baja (107 m²)' },
+      { key: 'alta', label: 'Planta Alta (83 m²)' }
+    ],
+    floors: {
+      baja: [
+        'Cochera frontal para 2 automóviles',
+        'Cocina contemporánea equipada con estufa de inducción magnética (100% libre de gas)',
+        'Estancia integrada de sala y comedor con vista directa al jardín privado',
+        'Recámara en Planta Baja con baño completo privado y clóset vestidor (accesibilidad)',
+        'Medio baño (sanitario de cortesía) independiente para visitas',
+        'Terraza exterior con acceso directo al jardín privado de 22.50 m²'
+      ],
+      alta: [
+        '2 Recámaras secundarias amplias con clósets de diseño y excelente iluminación natural',
+        '2 Baños completos privados (cada recámara cuenta con su propio baño)',
+        'Gran terraza / deck privado superior con sala exterior y jardineras',
+        'Vestíbulo distribuidor y cubo de escaleras iluminado'
+      ]
+    }
+  },
+
+  modeloD: {
+    id: 'modeloD',
+    name: 'Modelo D · 231.21 m²',
+    subtitle: '3 Niveles · Pérgolas 38.17 m² · Roof Garden y Jardín de 61.22 m²',
+    badge: '231.21 m² Const. · Lotes 181 a 220 m²',
+    desc: 'La residencia insignia de mayor metraje en Motul para los lotes más amplios del conjunto (Lotes 1, 12, 13 y 14). Desarrollada en 3 niveles con 231.21 m² de construcción más 38.17 m² de pérgolas y un jardín privado de 61.22 m². Ofrece doble altura en estancia social, cochera para hasta 3 autos y un tercer nivel con Roof Garden panorámico frontal y terraza posterior con vista a las montañas.',
+    specs: {
+      construction: '231.21 m²',
+      terrain: '181 m² a 220.92 m²',
+      garden: '61.22 m² (Pérgolas 38.17 m²)',
+      parking: '2 a 3 Autos',
       bedrooms: '3 Recámaras Totales',
       bathrooms: '3 Baños + 1 Sanitario',
       levels: '3 Plantas'
     },
-    planImage: 'assets/images/modelos/modelo_c.webp',
+    planImage: 'assets/images/modelos/modelo_d.webp',
     thumbnails: [
-      { src: 'assets/images/modelos/modelo_c.webp', alt: 'Plano Arquitectónico Oficial Modelo C', isPlan: true },
-      { src: 'assets/images/real_terraza.jpg', alt: 'Roof Garden y Doble Terraza' },
+      { src: 'assets/images/modelos/modelo_d.webp', alt: 'Plano Arquitectónico Oficial Modelo D (231.21 m²)', isPlan: true },
+      { src: 'assets/images/real_terraza.jpg', alt: 'Roof Garden y Doble Terraza con Pérgolas' },
       { src: 'assets/images/real_sala_comedor.jpg', alt: 'Estancia con Doble Altura' },
-      { src: 'assets/images/real_estudio.jpg', alt: 'Family Room / 3er Nivel' },
+      { src: 'assets/images/real_estudio.jpg', alt: 'Family Room / Tercer Nivel' },
       { src: 'assets/images/real_fachada_principal.jpg', alt: 'Fachada Arquitectónica 3 Niveles' }
     ],
     floorTabs: [
       { key: 'baja', label: 'Planta Baja' },
       { key: 'nivel1', label: '1er Nivel' },
-      { key: 'roof', label: '2do Nivel / Roof' }
+      { key: 'roof', label: 'Segundo Nivel / Roof' }
     ],
     floors: {
       baja: [
-        'Cochera amplia para 3 automóviles (o 2 camionetas + área de maniobra)',
+        'Cochera amplia para 2 a 3 automóviles con área de maniobra',
         'Vestíbulo de acceso con medio baño de cortesía (sanitario)',
         'Cocina de autor equipada con estufa de inducción electromagnética',
-        'Estancia sala-comedor con espectacular doble altura y cancelería panorámica',
-        'Terraza exterior techada y enorme jardín privado de 61 m² aprox.'
+        'Estancia sala-comedor con espectacular doble altura y cancelería de piso a techo',
+        'Terraza exterior techada con pérgolas y enorme jardín privado de 61.22 m²'
       ],
       nivel1: [
         '2 Recámaras de gran escala, cada una con su propio baño completo y vestidor',
@@ -397,234 +446,218 @@ const modelsData = {
         'Cubo de escalera amplio y descansado con luz cenital'
       ],
       roof: [
-        'Tercer nivel con 3ra recámara / master suite privada o family room con baño completo',
-        'Roof Garden panorámico al frente con espacio para asador y sala exterior',
+        'Tercer nivel con master suite privada o family room con baño completo',
+        'Roof Garden panorámico con pérgolas de 38.17 m² y área para asador',
         'Terraza posterior independiente para descanso o servicios'
       ]
     }
   }
 };
 
-let currentModelKey = 'modeloA';
-let currentFloorKey = 'baja';
-
+/* --------------------------------------------------------------------------
+   5. LÓGICA DEL CARRUSEL / SLIDER DE MODELOS RESIDENCIALES
+   -------------------------------------------------------------------------- */
 function initModelSwitcher() {
-  const modelTabButtons = document.querySelectorAll('.tab-btn-model');
-  const ctaModelBtn = document.getElementById('ctaModelRequest');
-  const mainImgWrapper = document.getElementById('modelMainRenderWrapper');
+  const track = document.getElementById('modelsCarouselTrack');
+  const prevBtn = document.getElementById('carouselPrevBtn');
+  const nextBtn = document.getElementById('carouselNextBtn');
+  const pillBtns = document.querySelectorAll('.carousel-pill-btn');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const counterNum = document.getElementById('carouselCurrentNum');
+  const cards = document.querySelectorAll('.model-carousel-card');
   const bpModal = document.getElementById('blueprintModal');
 
-  // Handle Model Tab clicks
-  modelTabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const targetModel = button.getAttribute('data-model');
-      if (targetModel && modelsData[targetModel]) {
-        currentModelKey = targetModel;
-        const model = modelsData[currentModelKey];
-        currentFloorKey = model.floorTabs[0].key; // Reset to first floor tab of that model
+  if (!track || cards.length === 0) return;
 
-        modelTabButtons.forEach(btn => {
-          btn.classList.remove('active');
-          btn.setAttribute('aria-selected', 'false');
-        });
-        button.classList.add('active');
-        button.setAttribute('aria-selected', 'true');
+  let activeIndex = 0;
 
-        renderActiveModel();
+  function updateActiveUI(index) {
+    activeIndex = Math.max(0, Math.min(index, cards.length - 1));
+
+    // Actualizar píldoras superiores
+    pillBtns.forEach((btn, i) => {
+      if (i === activeIndex) {
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+      } else {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
+      }
+    });
+
+    // Actualizar dots inferiores
+    dots.forEach((dot, i) => {
+      if (i === activeIndex) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+
+    // Actualizar contador
+    if (counterNum) {
+      counterNum.textContent = String(activeIndex + 1);
+    }
+  }
+
+  function scrollToSlide(index) {
+    if (index < 0 || index >= cards.length) return;
+    const targetCard = cards[index];
+    const trackPadding = 4;
+    const scrollTarget = targetCard.offsetLeft - track.offsetLeft - trackPadding;
+
+    track.scrollTo({
+      left: scrollTarget,
+      behavior: 'smooth'
+    });
+
+    updateActiveUI(index);
+  }
+
+  // Click en flechas
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      const newIndex = activeIndex > 0 ? activeIndex - 1 : cards.length - 1;
+      scrollToSlide(newIndex);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      const newIndex = activeIndex < cards.length - 1 ? activeIndex + 1 : 0;
+      scrollToSlide(newIndex);
+    });
+  }
+
+  // Click en píldoras de modelos
+  pillBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = parseInt(btn.getAttribute('data-slide-index'), 10);
+      if (!isNaN(idx)) {
+        scrollToSlide(idx);
       }
     });
   });
 
-  // Clicking main render wrapper (or zoom button) opens wide modal
-  if (mainImgWrapper && bpModal) {
-    mainImgWrapper.addEventListener('click', () => {
-      openPlanModalForCurrentModel();
-    });
-  }
-
-  // Pre-fill model interest when clicking CTA
-  if (ctaModelBtn) {
-    ctaModelBtn.addEventListener('click', () => {
-      const modelSelect = document.getElementById('leadModelInterest');
-      if (modelSelect) {
-        const optionMap = {
-          modeloA: 'Modelo A (190 m² · 2 Niveles · Suite en PB)',
-          modeloB: 'Modelo B (205 m² · 2 Niveles · Master Suite con Tina)',
-          modeloC: 'Modelo C (231 m² · 3 Niveles · Roof Garden)'
-        };
-        modelSelect.value = optionMap[currentModelKey] || 'Modelo A (190 m² · 2 Niveles · Suite en PB)';
-      }
-      const contactSection = document.getElementById('contacto');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
+  // Click en dots inferiores
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const idx = parseInt(dot.getAttribute('data-slide-index'), 10);
+      if (!isNaN(idx)) {
+        scrollToSlide(idx);
       }
     });
-  }
+  });
 
-  // Initial render
-  renderActiveModel();
-}
+  // Sincronización continua de scroll con debounce/rAF
+  let scrollTimeout;
+  track.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      const trackCenter = track.scrollLeft + track.clientWidth / 2;
+      let closestIndex = 0;
+      let minDistance = Infinity;
 
-function openPlanModalForCurrentModel() {
-  const bpModal = document.getElementById('blueprintModal');
-  const modalImg = document.getElementById('blueprintModalImg');
-  const modalTitle = document.getElementById('blueprintModalTitle');
-  const modalSub = document.getElementById('blueprintModalSubtitle');
-  const model = modelsData[currentModelKey];
-
-  if (bpModal && model) {
-    if (modalImg) {
-      modalImg.src = model.planImage;
-      modalImg.alt = `Plano arquitectónico oficial de ${model.name}`;
-    }
-    if (modalTitle) {
-      modalTitle.textContent = `Plano Arquitectónico Oficial — ${model.name}`;
-    }
-    if (modalSub) {
-      modalSub.innerHTML = `Construcción: <strong>${model.specs.construction}</strong> | Terreno: <strong>${model.specs.terrain}</strong> | Jardín: <strong>${model.specs.garden}</strong> | Solo 14 casas.`;
-    }
-    if (typeof bpModal.showModal === 'function') {
-      bpModal.showModal();
-    }
-  }
-}
-
-function renderActiveModel() {
-  const model = modelsData[currentModelKey];
-  if (!model) return;
-
-  // Title, subtitle, badge, desc
-  const titleEl = document.getElementById('modelNameDisplay');
-  const subtitleEl = document.getElementById('modelSubtitleDisplay');
-  const badgeEl = document.getElementById('modelBadgeDisplay');
-  const descEl = document.getElementById('modelDescDisplay');
-
-  if (titleEl) titleEl.textContent = model.name;
-  if (subtitleEl) subtitleEl.textContent = model.subtitle;
-  if (badgeEl) badgeEl.textContent = model.badge;
-  if (descEl) descEl.textContent = model.desc;
-
-  // Key Specs
-  const specConstEl = document.getElementById('specConst');
-  const specGardenEl = document.getElementById('specGarden');
-  const specParkingEl = document.getElementById('specParking');
-  const specBedsEl = document.getElementById('specBeds');
-  const specBathsEl = document.getElementById('specBaths');
-  const specLevelsEl = document.getElementById('specLevels');
-
-  if (specConstEl) specConstEl.textContent = model.specs.construction;
-  if (specGardenEl) specGardenEl.textContent = `${model.specs.terrain} / Jardín ${model.specs.garden}`;
-  if (specParkingEl) specParkingEl.textContent = model.specs.parking;
-  if (specBedsEl) specBedsEl.textContent = model.specs.bedrooms;
-  if (specBathsEl) specBathsEl.textContent = model.specs.bathrooms;
-  if (specLevelsEl) specLevelsEl.textContent = model.specs.levels;
-
-  // Main Image defaults to the official floor plan
-  const mainImgEl = document.getElementById('modelMainImg');
-  const renderWrapper = document.getElementById('modelMainRenderWrapper');
-  if (mainImgEl) {
-    mainImgEl.src = model.planImage;
-    mainImgEl.alt = `${model.name} — Plano Oficial MOTUL Espacios Residenciales`;
-  }
-  if (renderWrapper) {
-    renderWrapper.classList.add('showing-plan');
-  }
-
-  // Update dynamic WhatsApp quote button
-  const ctaModelWa = document.getElementById('ctaModelRequestWa');
-  const ctaModelText = document.getElementById('ctaModelRequestText');
-  if (ctaModelWa) {
-    const waMsg = encodeURIComponent(`Hola, solicito la cotización y corrida financiera del ${model.name} (${model.specs.construction}) en MOTUL Espacios Residenciales.`);
-    ctaModelWa.href = `https://wa.me/525589938477?text=${waMsg}`;
-  }
-  if (ctaModelText) {
-    ctaModelText.textContent = `Cotizar ${model.name.split('·')[0].trim()} por WhatsApp`;
-  }
-
-  renderFloorTabs(model);
-  renderThumbnails(model);
-  renderFloorFeatures();
-}
-
-function renderFloorTabs(model) {
-  const tabsContainer = document.getElementById('floorTabsContainer');
-  if (!tabsContainer) return;
-
-  tabsContainer.innerHTML = '';
-  model.floorTabs.forEach((tab, idx) => {
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = `floor-tab-btn ${tab.key === currentFloorKey ? 'active' : ''}`;
-    btn.setAttribute('data-floor', tab.key);
-    btn.setAttribute('role', 'tab');
-    btn.setAttribute('aria-selected', tab.key === currentFloorKey ? 'true' : 'false');
-    btn.textContent = tab.label;
-
-    btn.addEventListener('click', () => {
-      currentFloorKey = tab.key;
-      tabsContainer.querySelectorAll('.floor-tab-btn').forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
+      cards.forEach((card, idx) => {
+        const cardCenter = card.offsetLeft - track.offsetLeft + card.clientWidth / 2;
+        const distance = Math.abs(trackCenter - cardCenter);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIndex = idx;
+        }
       });
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-      renderFloorFeatures();
-    });
 
-    tabsContainer.appendChild(btn);
-  });
-}
+      updateActiveUI(closestIndex);
+    }, 60);
+  }, { passive: true });
 
-function renderThumbnails(model) {
-  const container = document.getElementById('modelThumbnailsContainer');
-  if (!container) return;
+  // Toggle interactivo entre Fotografía y Plano Técnico en la tarjeta
+  document.querySelectorAll('.view-toggle-btn').forEach(toggleBtn => {
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const targetId = toggleBtn.getAttribute('data-target');
+      const mode = toggleBtn.getAttribute('data-mode');
+      const img = document.getElementById(targetId);
+      if (!img) return;
 
-  container.innerHTML = '';
-  model.thumbnails.forEach((thumb, idx) => {
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = `thumb-btn ${idx === 0 ? 'active' : ''}`;
-    btn.setAttribute('aria-label', thumb.alt);
-    btn.innerHTML = `<img src="${thumb.src}" alt="${thumb.alt}" loading="lazy" width="120" height="80">`;
-
-    btn.addEventListener('click', () => {
-      const mainImg = document.getElementById('modelMainImg');
-      const renderWrapper = document.getElementById('modelMainRenderWrapper');
-      if (mainImg) {
-        mainImg.src = thumb.src;
-        mainImg.alt = thumb.alt;
+      const parentToggle = toggleBtn.closest('.media-view-toggle');
+      if (parentToggle) {
+        parentToggle.querySelectorAll('.view-toggle-btn').forEach(b => b.classList.remove('active'));
       }
-      if (renderWrapper) {
-        if (thumb.isPlan) {
-          renderWrapper.classList.add('showing-plan');
-        } else {
-          renderWrapper.classList.remove('showing-plan');
+      toggleBtn.classList.add('active');
+
+      if (mode === 'plan') {
+        const planSrc = img.getAttribute('data-plan');
+        if (planSrc) {
+          img.src = planSrc;
+          img.classList.add('showing-plan');
+        }
+      } else {
+        const photoSrc = img.getAttribute('data-photo');
+        if (photoSrc) {
+          img.src = photoSrc;
+          img.classList.remove('showing-plan');
         }
       }
-      container.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
     });
-
-    container.appendChild(btn);
   });
-}
 
-function renderFloorFeatures() {
-  const model = modelsData[currentModelKey];
-  const listEl = document.getElementById('floorFeaturesList');
-  if (!model || !listEl) return;
-
-  const features = model.floors[currentFloorKey] || [];
-  listEl.innerHTML = '';
-
-  features.forEach(feat => {
-    const li = document.createElement('li');
-    li.innerHTML = `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-      <span>${feat}</span>
-    `;
-    listEl.appendChild(li);
+  // Apertura de Plano HD al hacer clic en imagen o botón
+  document.querySelectorAll('[data-open-plan]').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modelKey = trigger.getAttribute('data-open-plan');
+      openPlanModalForModel(modelKey);
+    });
   });
+
+  function openPlanModalForModel(modelKey) {
+    const model = modelsData[modelKey];
+    const modalImg = document.getElementById('blueprintModalImg');
+    const modalTitle = document.getElementById('blueprintModalTitle');
+    const modalSub = document.getElementById('blueprintModalSubtitle');
+
+    if (bpModal && model) {
+      if (modalImg) {
+        modalImg.src = model.planImage;
+        modalImg.alt = `Plano arquitectónico oficial de ${model.name}`;
+      }
+      if (modalTitle) {
+        modalTitle.textContent = `Plano Arquitectónico Oficial — ${model.name}`;
+      }
+      if (modalSub) {
+        modalSub.innerHTML = `Construcción: <strong>${model.specs.construction}</strong> | Terreno: <strong>${model.specs.terrain}</strong> | Niveles: <strong>${model.specs.levels}</strong> | Solo 14 residencias.`;
+      }
+      if (typeof bpModal.showModal === 'function') {
+        bpModal.showModal();
+      }
+    }
+  }
+
+  // Pre-fill model select on contact form
+  document.querySelectorAll('.btn-card-wa').forEach(waBtn => {
+    waBtn.addEventListener('click', () => {
+      const card = waBtn.closest('.model-carousel-card');
+      if (card) {
+        const modelKey = card.getAttribute('data-model');
+        const modelSelect = document.getElementById('leadModelInterest');
+        if (modelSelect && modelKey) {
+          const optionMap = {
+            modeloA: 'Modelo A (215.76 m² · 3 Niveles · Lotes 2, 7 y 8 al 11)',
+            modeloB: 'Modelo B (205.00 m² · 2 Niveles · PB 105 m² + PA 100 m² · Jardín 39 m²)',
+            modeloC: 'Modelo C (190.00 m² · 2 Niveles · Suite en PB · Jardín 22.50 m²)',
+            modeloD: 'Modelo D (231.21 m² · 3 Niveles · Pérgolas 38 m² · Jardín 61 m²)'
+          };
+          if (optionMap[modelKey]) {
+            modelSelect.value = optionMap[modelKey];
+          }
+        }
+      }
+    });
+  });
+
+  // Estado inicial
+  updateActiveUI(0);
 }
 
 /* --------------------------------------------------------------------------
@@ -906,7 +939,7 @@ function initLeadForm() {
         `\n¿Tienen disponibilidad este fin de semana para conocer la casa muestra?`
       );
 
-      const waLink = `https://wa.me/525589938477?text=${waText}`;
+      const waLink = `https://wa.me/525522500741?text=${waText}`;
 
       showFeedback(
         `¡Gracias por tu interés, ${name}! Hemos registrado tu solicitud exitosamente. Un asesor patrimonial te contactará de inmediato.<br><br>` +
