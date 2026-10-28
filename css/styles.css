@@ -856,6 +856,12 @@ p {
   z-index: 0;
 }
 
+.hero-media-wrapper picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .hero-bg-image {
   width: 100%;
   height: 100%;
