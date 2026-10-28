@@ -199,9 +199,12 @@ p {
   font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   color: var(--color-bronze-600);
   margin-bottom: 1rem;
+  max-width: 100%;
+  flex-wrap: wrap;
+  line-height: 1.35;
 }
 
 .eyebrow::before {
@@ -210,6 +213,7 @@ p {
   width: 24px;
   height: 1.5px;
   background-color: var(--color-bronze-600);
+  flex-shrink: 0;
 }
 
 .eyebrow-light {
@@ -236,6 +240,9 @@ p {
   padding-top: var(--section-padding-y);
   padding-bottom: var(--section-padding-y);
   position: relative;
+  overflow: hidden;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .section-header {
@@ -3185,31 +3192,68 @@ dialog.custom-modal-wide {
 }
 
 @media (max-width: 768px) {
-  /* Botones Generales en Móvil (Evita desborde y saltos bruscos) */
+  /* Botones Generales en Móvil: Sin mayúsculas forzadas que ensanchan el texto y con wrap fluido */
   .btn {
-    padding: 0.85rem 1.35rem;
-    font-size: 0.85rem;
-    white-space: normal;
-    text-align: center;
-    max-width: 100%;
-    word-break: normal;
-    overflow-wrap: break-word;
-    line-height: 1.25;
+    text-transform: none !important;
+    letter-spacing: 0.01em !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    white-space: normal !important;
+    text-align: center !important;
+    padding: 0.85rem 1.15rem !important;
+    line-height: 1.3 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    min-height: 48px !important;
   }
+  .btn span {
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.3 !important;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.06em !important;
+    line-height: 1.35 !important;
+    gap: 0.4rem !important;
+  }
+  .eyebrow::before {
+    width: 16px !important;
+  }
+
   .hero-cta-group {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
   }
   .hero-cta-group .btn {
-    width: 100%;
+    width: 100% !important;
   }
+
+  .project-cta-row,
+  .sustainability-cta-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+  }
+  .project-cta-row .btn,
+  .sustainability-cta-row .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
   .project-overview-grid .btn {
-    width: 100%;
+    width: 100% !important;
   }
   .form-submit-row .btn {
-    width: 100%;
-    max-width: 380px;
+    width: 100% !important;
+    max-width: 380px !important;
   }
 
   /* Carrusel de Modelos y Pastillas */
@@ -3292,8 +3336,30 @@ dialog.custom-modal-wide {
     grid-template-columns: 1fr;
   }
   .sustainability-banner {
-    grid-template-columns: 1fr;
-    padding: 1.5rem;
+    grid-template-columns: minmax(0, 1fr) !important;
+    padding: 1.25rem 1rem !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-top: 2rem !important;
+  }
+  .sustainability-banner > div {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .sustainability-title {
+    font-size: clamp(1.35rem, 5vw, 1.85rem) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.85rem !important;
+    color: #ffffff;
+  }
+  .sustainability-banner p {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1.25rem !important;
   }
   .specs-pills-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -3308,15 +3374,33 @@ dialog.custom-modal-wide {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
+
+  /* Dock Flotante Compacto en Móvil (No tapa contenido ni botones) */
   .floating-action-dock {
-    bottom: 1.25rem;
-    right: 1.25rem;
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px)) !important;
+    right: 1rem !important;
+    gap: 0.5rem !important;
+    z-index: 99 !important;
   }
-  .dock-whatsapp-btn span {
-    display: none;
+  .back-to-top-btn {
+    display: none !important;
   }
   .dock-whatsapp-btn {
-    padding: 0.85rem;
+    width: 48px !important;
+    height: 48px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45) !important;
+  }
+  .dock-whatsapp-btn span {
+    display: none !important;
+  }
+  .dock-whatsapp-btn svg {
+    width: 24px !important;
+    height: 24px !important;
   }
 }
 
@@ -4001,8 +4085,21 @@ dialog.custom-modal-wide {
 
 @media (max-width: 992px) {
   .boutique-showcase-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 1.75rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .boutique-visual-column,
+  .boutique-info-column {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .plano-architectural-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
   }
   .plano-canvas img {
     max-height: 360px;
@@ -4016,32 +4113,87 @@ dialog.custom-modal-wide {
 }
 
 @media (max-width: 768px) {
-  .plano-spec-pills {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.65rem 0.5rem;
-    padding: 0.85rem 1rem;
+  .plano-card-header {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.65rem !important;
+    padding: 0.85rem 1rem !important;
   }
-  .plano-spec-pills .spec-pill:last-child {
-    grid-column: 1 / -1;
+  .plano-card-title-group {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 0.45rem !important;
+  }
+  .plano-card-title {
+    font-size: 0.88rem !important;
+  }
+  .plano-zoom-btn {
+    font-size: 0.76rem !important;
+    padding: 0.35rem 0.65rem !important;
+  }
+  .plano-spec-pills {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.55rem !important;
+    padding: 0.85rem 1rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .spec-pill {
+    font-size: 0.82rem !important;
+    width: 100% !important;
   }
   .btn-tech-plan {
-    font-size: 0.82rem;
-    padding: 0.8rem 0.85rem;
-    white-space: normal;
-    text-align: center;
-    line-height: 1.25;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0.85rem 1rem !important;
+    font-size: 0.84rem !important;
+    line-height: 1.3 !important;
+    white-space: normal !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+  .btn-tech-plan span {
+    white-space: normal !important;
+    text-align: center !important;
+  }
+  .benefit-card {
+    padding: 0.95rem 1rem !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .benefit-icon {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  .benefit-content {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+  .benefit-content h4 {
+    font-size: 0.94rem !important;
+  }
+  .benefit-content p {
+    font-size: 0.82rem !important;
+    line-height: 1.45 !important;
   }
   .boutique-conversion-box {
-    padding: 1.25rem 1rem;
+    padding: 1.25rem 1rem !important;
+    border-radius: 16px !important;
   }
   .conversion-buttons .btn {
-    width: 100%;
-    white-space: normal;
-    text-align: center;
-    padding: 0.85rem 1rem;
-    font-size: 0.84rem;
-    line-height: 1.25;
+    width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
+    padding: 0.85rem 1rem !important;
+    font-size: 0.84rem !important;
+    line-height: 1.3 !important;
   }
 }
 
@@ -4062,14 +4214,14 @@ dialog.custom-modal-wide {
     font-size: 0.9rem;
   }
   .plano-card-header {
-    padding: 0.85rem 1rem;
+    padding: 0.75rem 0.85rem !important;
   }
   .plano-card-title {
-    font-size: 0.88rem;
+    font-size: 0.84rem !important;
   }
   .plano-zoom-btn {
-    font-size: 0.72rem;
-    padding: 0.35rem 0.65rem;
+    font-size: 0.72rem !important;
+    padding: 0.3rem 0.55rem !important;
   }
 }
 
