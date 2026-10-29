@@ -319,7 +319,7 @@ const modelsData = {
     name: 'Modelo B · 205.00 m²',
     subtitle: '2 Niveles · PB 105 m² + PA 100 m² · Gran Jardín de 39 m²',
     badge: '205.00 m² Const. · 154 m² Terreno',
-    desc: 'Equilibrio perfecto entre amplitud social y confort íntimo en lote de 154 m². Cuenta con 105 m² en Planta Baja y 100 m² en Planta Alta. Ofrece una generosa estancia abierta conectada con canceles corredizos a una terraza cubierta y a un gran jardín privado de 39 m² con sanitario y bodega exterior. En planta alta, la Master Suite incorpora un lujoso baño tipo spa con tina de hidromasaje, doble lavabo y vestidor walk-in.',
+    desc: 'Equilibrio perfecto entre amplitud social y confort íntimo en lote de 154 m². Cuenta con 105 m² en Planta Baja y 100 m² en Planta Alta. Ofrece una generosa estancia abierta conectada con canceles corredizos a una terraza cubierta y a un gran jardín privado de 39 m² con sanitario y bodega exterior. En planta alta, la Master Suite incorpora un amplio baño completo privado con acabados de lujo y vestidor walk-in.',
     specs: {
       construction: '205.00 m²',
       terrain: '154 m²',
@@ -332,8 +332,8 @@ const modelsData = {
     planImage: 'assets/images/modelos/modelo_b.webp',
     thumbnails: [
       { src: 'assets/images/modelos/modelo_b.webp', alt: 'Plano Arquitectónico Oficial Modelo B (205.00 m²)', isPlan: true },
-      { src: 'assets/images/real_recamara_principal.jpg', alt: 'Master Suite con Tina y Vestidor' },
-      { src: 'assets/images/real_bano.jpg', alt: 'Baño de Lujo con Tina y Doble Lavabo' },
+      { src: 'assets/images/real_recamara_principal.jpg', alt: 'Master Suite con Vestidor' },
+      { src: 'assets/images/real_bano.jpg', alt: 'Baño Principal con Acabados de Lujo' },
       { src: 'assets/images/real_sala_comedor.jpg', alt: 'Estancia Abierta a Jardín 39m²' },
       { src: 'assets/images/real_cocina.jpg', alt: 'Cocina Integral de Inducción' }
     ],
@@ -351,7 +351,7 @@ const modelsData = {
         'Bodega y sanitario exterior de servicio en el área de jardín'
       ],
       alta: [
-        'Master Suite de gran formato con tina de baño, doble lavabo y amplio vestidor walk-in',
+        'Master Suite de gran formato con baño completo integrado y amplio vestidor walk-in',
         '2 Recámaras secundarias muy amplias con clósets de madera completos',
         '2 Baños completos adicionales integrados a las recámaras',
         'Vestíbulo central distribuidor con clóset de blancos'
